@@ -42,7 +42,6 @@ tested.
     <body>
        
         
-    
        <!-- <img src="" alt="Swinburne Logo" title="Swinburne"> -->
 
         
@@ -60,14 +59,45 @@ tested.
                         <option value="Tutor2">unknown as of now</option>
                     </select>
             </fieldset>
+            <br>
+            <br>
+            
             <fieldset>
-                <legend>Personal Info</legend>
+            <legend>Personal Info</legend>
 <!--Name + Surname + gender + birthday-->
+            <legend>Name</legend>
+                <label for="GiveName">First Name</label>
+                <input type="text" id="FirstName" name="FirstName" pattern="[A-Za-z]+" title="Only letters allowed" maxlength="19" required>
+                <br>
+                <br>
 
+                <label for="FamName">Last Name</label>
+                <input type="text" id="LastName" name="LastName" pattern="[A-Za-z]+" title="Only letters allowed" maxlength="19" required>
+                <br>
+                <br>
 
+            <legend>Date of Birth</legend>
+                <label for="dob">Date of Birth</label> 
+                <input type="text" name="dob" id="dob" placeholder="dd/mm/yy" pattern="\d{2}/\d{2}/\d{2}" title="Enter date in dd/mm/yy format" required>
+                <br>
+                <br>
+
+            <legend>Gender</legend>
+                <input type="checkbox" id="Male" name="Gender[]" value="Male" >
+                <label for="Male">Male</label>
+
+                <input type="checkbox" id="Female" name="Gender[]" value="Female" >
+                <label for="Female">Female</label>
+
+                <input type="checkbox" id="Other" name="Gender[]" value="Other" >
+                <label for="Other">Other</label>
+
+                <input type="checkbox" id="Rather not say" name="Gender[]" value="Rather not say" >
+                <label for="N/A">Rather not say</label>
+            </fieldset>
 <!--address info-->
 
-            </fieldset>
+            
 <!--Contact info legend-->
 
 
