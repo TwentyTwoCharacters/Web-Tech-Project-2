@@ -86,6 +86,10 @@ nav a:hover {
     text-align: center;
 }
 
+.listalign {
+    display: inline-block; /* makes it respect text-align center */
+}
+
 .typewriter {
     display: inline-block;
     font-size: 32px;                     /* Make the text big and readable */
@@ -105,7 +109,7 @@ nav a:hover {
     50% { border-color: transparent; }	/* Cursor disappears halfway through each blink */
 }
 
-.typewriter-container {
+.center-container {
     text-align: center;
 }
 
