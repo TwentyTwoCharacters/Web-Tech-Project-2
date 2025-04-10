@@ -60,6 +60,9 @@ description: styling html webpage
 
 /* General CSS code */
 
+/*Background colour */
+
+
 /* Navigation bar styling */
 nav {
     display: flex;
@@ -72,11 +75,7 @@ nav a {
     text-decoration: none;
     padding: 0.5em 0.5em;
     border: 1px solid #ccc;
-<<<<<<< HEAD
-    margin: 0 0.5em
-=======
-	margin: 0.5em 0.5em
->>>>>>> 901df7fd55da7fb7549d4c79353ce7a8170fc13a
+    <<<<<<< HEAD margin: 0 0.5em=======margin: 0.5em 0.5em >>>>>>> 901df7fd55da7fb7549d4c79353ce7a8170fc13a
 }
 
 /* Navigation hover effect */
@@ -87,12 +86,12 @@ nav a:hover {
 /* Index Page */
 
 .indexhr {
-	height: 8px;
-	border: none;
-	border-radius: 50px;
-	background: #6c63ff;
-	width: 100%;
-	margin: 1em 0;
+    height: 8px;
+    border: none;
+    border-radius: 50px;
+    background: #6c63ff;
+    width: 100%;
+    margin: 1em 0;
 }
 
 .indextextcenter {
@@ -100,26 +99,45 @@ nav a:hover {
 }
 
 .listalign {
-    display: inline-block; /* makes it respect text-align center */
+    display: inline-block;
+    /* makes it respect text-align center */
 }
 
 .typewriter {
     display: inline-block;
-    font-size: 32px;                     /* Make the text big and readable */
-    white-space: nowrap;                /* Prevent text from wrapping to the next line */
-    overflow: hidden;                   /* Hide text that hasn't "typed" yet */
-    border-right: 2px solid black;      /* Simulate blinking cursor */
-    width: 0; 							 /* Start with 0 width (no characters visible yet) */
-    animation: typing 4s steps(30, end) forwards, blink 0.75s step-end infinite;	/* 'typing' animation lasts 4s, steps make characters appear one by one, 'blink' animation makes the cursor blink repeatedly */
+    font-size: 32px;
+    /* Make the text big and readable */
+    white-space: nowrap;
+    /* Prevent text from wrapping to the next line */
+    overflow: hidden;
+    /* Hide text that hasn't "typed" yet */
+    border-right: 2px solid black;
+    /* Simulate blinking cursor */
+    width: 0;
+    /* Start with 0 width (no characters visible yet) */
+    animation: typing 4s steps(30, end) forwards, blink 0.75s step-end infinite;
+    /* 'typing' animation lasts 4s, steps make characters appear one by one, 'blink' animation makes the cursor blink repeatedly */
 }
 
 @keyframes typing {
-    from { width: 0; }	/* Start with nothing shown */
-    to { width: 31ch; }	 /* Reveal 17 characters */
+    from {
+        width: 0;
+    }
+
+    /* Start with nothing shown */
+    to {
+        width: 31ch;
+    }
+
+    /* Reveal 17 characters */
 }
 
 @keyframes blink {
-    50% { border-color: transparent; }	/* Cursor disappears halfway through each blink */
+    50% {
+        border-color: transparent;
+    }
+
+    /* Cursor disappears halfway through each blink */
 }
 
 .center-container {
@@ -127,14 +145,16 @@ nav a:hover {
 }
 
 .indexfooter {
-    border-top: 6px double blue; 
+    border-top: 6px double blue;
     clear: both;
 }
 
 /* About Page */
 
+
 body {
     font-family: Arial, sans-serif;
+
 }
 
 
