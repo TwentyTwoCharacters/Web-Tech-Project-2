@@ -70,9 +70,9 @@ nav {
 /* Navigation links styling */
 nav a {
     text-decoration: none;
-    padding:0.5em 0.5em;
+    padding: 0.5em 0.5em;
     border: 1px solid #ccc;
-	margin: 0 0.5em
+	margin: 0.5em 0.5em
 }
 
 /* Navigation hover effect */
@@ -82,8 +82,32 @@ nav a:hover {
 
 /* Index Page */
 
+.indextextcenter {
+    text-align: center;
+}
 
+.typewriter {
+    display: inline-block;
+    font-size: 32px;                     /* Make the text big and readable */
+    white-space: nowrap;                /* Prevent text from wrapping to the next line */
+    overflow: hidden;                   /* Hide text that hasn't "typed" yet */
+    border-right: 2px solid black;      /* Simulate blinking cursor */
+    width: 0; 							 /* Start with 0 width (no characters visible yet) */
+    animation: typing 4s steps(30, end) forwards, blink 0.75s step-end 6;	/* 'typing' animation lasts 4s, steps make characters appear one by one, 'blink' animation makes the cursor blink repeatedly */
+}
 
+@keyframes typing {
+    from { width: 0; }	/* Start with nothing shown */
+    to { width: 31ch; }	 /* Reveal 17 characters */
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }	/* Cursor disappears halfway through each blink */
+}
+
+.typewriter-container {
+    text-align: center;
+}
 
 /* About Page */
 
