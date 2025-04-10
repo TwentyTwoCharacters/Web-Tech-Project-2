@@ -82,6 +82,15 @@ nav a:hover {
 
 /* Index Page */
 
+.indexhr {
+	height: 8px;
+	border: none;
+	border-radius: 50px;
+	background: #6c63ff;
+	width: 100%;
+	margin: 1em 0;
+}
+
 .indextextcenter {
     text-align: center;
 }
@@ -97,7 +106,7 @@ nav a:hover {
     overflow: hidden;                   /* Hide text that hasn't "typed" yet */
     border-right: 2px solid black;      /* Simulate blinking cursor */
     width: 0; 							 /* Start with 0 width (no characters visible yet) */
-    animation: typing 4s steps(30, end) forwards, blink 0.75s step-end 6;	/* 'typing' animation lasts 4s, steps make characters appear one by one, 'blink' animation makes the cursor blink repeatedly */
+    animation: typing 4s steps(30, end) forwards, blink 0.75s step-end infinite;	/* 'typing' animation lasts 4s, steps make characters appear one by one, 'blink' animation makes the cursor blink repeatedly */
 }
 
 @keyframes typing {
@@ -111,6 +120,11 @@ nav a:hover {
 
 .center-container {
     text-align: center;
+}
+
+.indexfooter {
+    border-top: 6px double blue; 
+    clear: both;
 }
 
 /* About Page */
