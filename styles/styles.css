@@ -60,7 +60,25 @@ description: styling html webpage
 
 /* General CSS code */ 
 
+/* Navigation bar styling */
+nav {
+    display: flex;
+	justify-content: center;
+    margin-top: 20px;
+}
 
+/* Navigation links styling */
+nav a {
+    text-decoration: none;
+    padding:0.5em 0.5em;
+    border: 1px solid #ccc;
+	margin: 0 0.5em
+}
+
+/* Navigation hover effect */
+nav a:hover {
+    border: 4px solid blue;
+}
 
 /* Index Page */
 
