@@ -58,21 +58,21 @@ description: styling html webpage
 
 */
 
-/* General CSS code */ 
+/* General CSS code */
 
 /* Navigation bar styling */
 nav {
     display: flex;
-	justify-content: center;
+    justify-content: center;
     margin-top: 20px;
 }
 
 /* Navigation links styling */
 nav a {
     text-decoration: none;
-    padding:0.5em 0.5em;
+    padding: 0.5em 0.5em;
     border: 1px solid #ccc;
-	margin: 0 0.5em
+    margin: 0 0.5em
 }
 
 /* Navigation hover effect */
@@ -87,6 +87,29 @@ nav a:hover {
 
 /* About Page */
 
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+figure {
+    text-align: center;
+}
+
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+
+caption {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
 
 
 
