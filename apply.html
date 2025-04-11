@@ -1,243 +1,137 @@
-<!--This page has a form that allows a potential candidate to register their interest in the advertised
-position. HTML5 data validation should be used to check the user’s input.
-The form will allow a potential applicant to fill in the following:
-Field Format requirement
-Job reference number drop down selection including all jobs ref numbers
-First name max 20 alpha characters
-Last name max 20 alpha characters
-Date of birth dd/mm/yyyy
-Gender radio inputs grouped using a fieldset and legend
-Street Address max 40 characters
-Suburb/town max 40 characters
-State drop down selection from
-VIC,NSW,QLD,NT,WA,SA,TAS,ACT
-Postcode exactly 4 digits based on States
-Email address validate format with regular expression & patterns
-Phone number 8 to 12 digits, or spaces
-Required technical list checkbox inputs
-Other skills textarea
-All inputs should have labels. All form values, except the "Other Skills" textarea are ‘required’ or
-have a default value (e.g. select and checkbox inputs). The user should not be able to submit the
-form if any of these required fields are blank or incorrectly filled.
-Data Submission to Server
-The form should have a submit button labelled “Apply”. When this button is clicked the name-
-values from the associated form should be sent to the server using the post http method. The
-server action address is https://mercury.swin.edu.au/it000000/formtest.php. The server will then
-just echo back the name value pairs to the client. While nothing will be stored on the server in
-this part of the assignment (we will do this in Part 2) this will allow the form submission to be
-tested.
--->
+<!DOCTYPE html>
+<html lang="en">
 
-<!--LUKES PAGE-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Job application form">
+    <meta name="author" content="Luke">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Job Application</title>
+</head>
 
-<!--LUKES PAGE-->
+<body class="applybody">
+    <header>
+        <div class="center-container">
+            <h1 class="typewriter">Optional Programmers</h1>
+        </div>
+        <nav>
+            <a href="about.html">About us</a>
+            <a href="jobs.html">Job description</a>
+            <a href="index.html">Index</a>
+        </nav>
+        <hr class="indexhr">
+    </header>
 
-<!DOCTYPE html> <!-- Declares the document type -->
-<section lang="en"> <!-- Starts the HTML document and sets the language to English -->
-
-    <head>
-        <!-- Meta tags give info about the page -->
-        <meta charset="UTF-8"> <!-- Sets character encoding -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive -->
-        <meta name="description" content="Markup of Non marked up page"> <!-- Page description -->
-        <meta name="keywords" content="Markup"> <!-- Keywords for search engines -->
-        <meta name="author" content="Your Name"> <!-- Author of the page -->
-        <link rel="stylesheet" href="styles\styles.css"> <!-- Links external CSS file -->
-        <title>Job Application</title> <!-- Title shown in browser tab -->
-    </head>
-
-    <body class="applybody">
-
-        <header> <!--CREDIT TO LUCAS FOR MAKING THE THEME-->
-            <div class="center-container">
-                <h1 class="typewriter">Optional Programmers</h1> <!-- Main heading -->
-            </div>
-
-            <nav> <!-- Nav menu -->
-                <a href="about.html">About us</a>
-                <a href="jobs.html">Job description</a>
-                <a href="index.html">Index</a>
-            </nav>
-            <hr class="indexhr"> <!-- Horizontal line for visual separation -->
-        </header>
-
-        <!-- <img src="" alt="soon to add" title="belhhh"> --> <!-- Placeholder image, not used yet -->
-        <section class="entirepage">
-            <section class="pagetop">
-                <br>
-                <h1 class="applyh1">Job Application Portal</h1>
-                <p>This is the job application portal for our company Optional Programmers.</p>
-                <p>Please refer to the application below.</p>
-            </section>
-            <section class="jobform">
-                <!-- Form sends data to server when submitted -->
-                <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="Apply">
-                    <fieldset> <!-- Group of form fields -->
-                        <legend class="appLegend">Job Application</legend>
-                        <label for="tutor">Job ID</label>
-                        <!-- Dropdown list for selecting job ID -->
-                        <select id="tutor" name="tutor" required>
-                            <option value="">Please Select</option>
-                            <option value="Tutor1">G05 - IT Support Technician</option>
-                            <option value="Tutor2">Software Developer</option>
-                        </select>
-                    </fieldset>
-                    <br><br>
-
-                    <fieldset>
-                        <legend class="appLegend">Personal Info</legend>
-                        <!--Name + Surname + gender + birthday-->
-
-                        <p>Name</p>
-                        <!-- Input for first name -->
-                        <label for="GiveName">First Name</label>
-                        <input type="text" id="FirstName" name="FirstName" pattern="[A-Za-z]+"
-                            title="Only letters allowed" maxlength="19" required>
-                        <br><br>
-
-                        <!-- Input for last name -->
-                        <label for="FamName">Last Name</label>
-                        <input type="text" id="LastName" name="LastName" pattern="[A-Za-z]+"
-                            title="Only letters allowed" maxlength="19" required>
-                        <br><br>
-
-                        <!-- Input for date of birth -->
-                        <p>Date of Birth</p>
-                        <label for="dob"></label>
-                        <input type="text" name="dob" id="dob" placeholder="dd/mm/yy" pattern="\d{2}/\d{2}/\d{2}"
-                            title="Enter date in dd/mm/yy format" required>
-                        <br><br>
-
-                        <!-- Checkboxes for gender selection -->
-                        <p>Gender</p>
-                        <input type="checkbox" id="Male" name="Gender[]" value="Male">
-                        <label for="Male">Male</label>
-
-                        <input type="checkbox" id="Female" name="Gender[]" value="Female">
-                        <label for="Female">Female</label>
-
-                        <input type="checkbox" id="Other" name="Gender[]" value="Other">
-                        <label for="Other">Other</label>
-
-                        <input type="checkbox" id="Rather not say" name="Gender[]" value="Rather not say">
-                        <label for="N/A">Rather not say</label>
-                    </fieldset>
-
-                    <br><br>
-
-                    <!--address info-->
-                    <fieldset>
-                        <legend class="appLegend">Address Information</legend>
-                        <br>
-
-                        <!-- Input for street address -->
-                        <label for="StrAddr">Street Address</label>
-                        <input type="text" id="StrAddr" name="Street Address" maxlength="39" required>
-                        <br><br>
-
-                        <!-- Input for suburb -->
-                        <label for="Suburb">Suburb</label>
-                        <input type="text" id="Suburb" name="Suburb" maxlength="39" required>
-                        <br><br>
-                        <!--I wish i could use JAVA-->
-                        <!-- Input for postcode -->
-                        <label for="Postcode">Postcode</label>
-                        <input type="Postcode" id="Postcode" name="PostCode" maxlength="3" required>
-                        <br><br>
-
-                        <!-- Dropdown for state selection -->
-                        <label for="state">State:</label>
-                        <select id="state" name="State" required>
-                            <option value="">Please Select a state</option>
-                            <option value="Tutor1">Victoria</option>
-                            <option value="Tutor2">NSW</option>
-                            <option value="Tutor3">Tasmania</option>
-                            <option value="Tutor3">Queensland</option>
-                            <option value="Tutor3">Northern Territory</option>
-                            <option value="Tutor3">South Australia</option>
-                            <option value="Tutor3">Western Austrlia</option>
-                            <option value="Tutor3">ACT</option>
-                        </select>
-                    </fieldset>
-
-                    <!--Contact info legend-->
-                    <fieldset>
-                        <legend class="appLegend">Contact Info</legend>
-
-                        <!-- Input for phone number -->
-                        <label for="PhNum">Phone Number</label>
-                        <input type="text" id="PhNum" name="Phone Number" maxlength="" required>
-                        <br>
-                        <br>
-                        <!-- Input for email with pattern to check email format -->
-                        <label for="EmailAdd">Email Address</label>
-                        <input type="text" id="EmailAdd" name="email Address"
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-                    </fieldset>
-
-                    <!--Job information-->
-                    <fieldset>
-                        <legend class="appLegend">Job Related Information</legend>
-
-
-                        <p>Technical Skills</p>
-                        <!-- Checkboxes for technical skills -->
-                        <input type="checkbox" id="Networks" name="Skill[]" value="Networks" checked>
-                        <label for="Networks">Networks</label>
-
-                        <input type="checkbox" id="Computer Systems" name="Skill[]" value="Computer Systems">
-                        <label for="Computer Systems">Computer Systems</label>
-
-                        <p>Coding Languages</p>
-
-                        <!-- Checkboxes for coding skills -->
-                        <input type="checkbox" id="HTML" name="issue[]" value="HTML" checked>
-                        <label for="HTML">HTML</label>
-
-                        <input type="checkbox" id="CSS" name="issue[]" value="CSS">
-                        <label for="CSS">CSS</label>
-
-                        <input type="checkbox" id="JavaScript" name="issue[]" value="JavaScript">
-                        <label for="JavaScript">JavaScript</label>
-
-                        <br><br>
-
-                        <!-- Text area for other skills -->
-                        <label for="Skills">Other Skills</label>
-                        <br>
-                        <textarea id="Skills" name="Skills" rows="4" cols="30"
-                            placeholder="Write any other skills you may have that will help your application..."></textarea>
-
-                        <br><br>
-
-                        <!--Voided the multi choice drop box is ugly-->
-                        <!--
-                <label for="Language">Choose coding languages:</label>
-                <select name="language" id="language" multiple>
-                    <option value="CSS">CSS</option>
-                    <option value="Java">Java</option>
-                    <option value="Ruby">Ruby</option>
-                    <option value="Python">Python</option>
-                </select>
-                -->
-                    </fieldset>
-
-                    <!-- Submit and reset buttons -->
-                    <input type="submit" value="Apply">
-                    <input type="reset" value="Reset Application">
-                </form>
-            </section>
-            <br><br><br>
+    <section class="entirepage">
+        <section class="pagetop">
+            <h1 class="applyh1">Job Application Portal</h1>
+            <p>This is the job application portal for our company Optional Programmers.</p>
+            <p>Please refer to the application below.</p>
         </section>
-        <footer> <!--CREDIT TO LUCAS -->
-            <p>
-                If you have any further questions<br>
-                please contact us at <a href="info@OptionalProgrammers.com.au">info@OptionalProgrammers.com.au</a>
-            </p>
-            <p>
-                <a href="">Jira</a><a href="">Github</a>
-            </p>
-        </footer>
-    </body>
 
-    </html>
+        <section class="jobform">
+            <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+                <fieldset>
+                    <legend class="appLegend">Job Application</legend>
+                    <label for="jobid">Job ID</label>
+                    <select id="jobid" name="jobid" required>
+                        <option value="">Please Select</option>
+                        <option value="G05">G05 - IT Support Technician</option>
+                        <option value="G06">N/A - Software Developer</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="appLegend">Personal Info</legend>
+
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" pattern="[A-Za-z]{1,20}" maxlength="20" required>
+
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" pattern="[A-Za-z]{1,20}" maxlength="20" required>
+
+                    <label for="dob">Date of Birth</label>
+                    <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required>
+
+                    <fieldset>
+                        <legend>Gender</legend>
+                        <input type="radio" id="male" name="gender" value="Male" required><label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="Female"><label for="female">Female</label>
+                        <input type="radio" id="other" name="gender" value="Other"><label for="other">Other</label>
+                        <input type="radio" id="notsay" name="gender" value="Rather not say"><label for="notsay">Rather not say</label>
+                    </fieldset>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="appLegend">Address Information</legend>
+                    <label for="street">Street Address</label>
+                    <input type="text" id="street" name="street" maxlength="40" required>
+
+                    <label for="suburb">Suburb/Town</label>
+                    <input type="text" id="suburb" name="suburb" maxlength="40" required>
+
+                    <label for="state">State</label>
+                    <select id="state" name="state" required>
+                        <option value="">Select State</option>
+                        <option value="VIC">VIC</option>
+                        <option value="NSW">NSW</option>
+                        <option value="QLD">QLD</option>
+                        <option value="NT">NT</option>
+                        <option value="WA">WA</option>
+                        <option value="SA">SA</option>
+                        <option value="TAS">TAS</option>
+                        <option value="ACT">ACT</option>
+                    </select>
+
+                    <label for="postcode">Postcode</label>
+                    <input type="text" id="postcode" name="postcode" pattern="\d{4}" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="appLegend">Contact Info</legend>
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" name="phone" pattern="[\d\s]{8,12}" required>
+
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="appLegend">Job Related Information</legend>
+                    <p>Technical Skills</p>
+                    <input type="checkbox" id="networks" name="skills[]" value="Networks" checked>
+                    <label for="networks">Networks</label>
+
+                    <input type="checkbox" id="systems" name="skills[]" value="Computer Systems">
+                    <label for="systems">Computer Systems</label>
+
+                    <p>Coding Languages</p>
+                    <input type="checkbox" id="html" name="languages[]" value="HTML" checked>
+                    <label for="html">HTML</label>
+
+                    <input type="checkbox" id="css" name="languages[]" value="CSS">
+                    <label for="css">CSS</label>
+
+                    <input type="checkbox" id="js" name="languages[]" value="JavaScript">
+                    <label for="js">JavaScript</label>
+
+                    <label for="otherskills">Other Skills</label>
+                    <textarea id="otherskills" name="otherskills" rows="4" cols="30" placeholder="Write any other skills..."></textarea>
+                </fieldset>
+
+                <input type="submit" value="Apply">
+                <input type="reset" value="Reset Application">
+            </form>
+        </section>
+    </section>
+
+    <footer>
+        <p>If you have any further questions<br>
+            contact us at <a href="mailto:info@OptionalProgrammers.com.au">info@OptionalProgrammers.com.au</a>
+        </p>
+        <p><a href="#">Jira</a> <a href="#">Github</a></p>
+    </footer>
+</body>
+
+</html>
