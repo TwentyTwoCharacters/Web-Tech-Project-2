@@ -191,6 +191,12 @@ nav a:hover {
 
 .appLegend {font-weight: bold;}
 
+.jobform { height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+border: black,2px auto;}
 
-
+.pagetop{text-align: center;}
 /* Jobs Page */
