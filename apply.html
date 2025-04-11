@@ -30,108 +30,114 @@ tested.
 
 <!--LUKES PAGE-->
 
-<!DOCTYPE html>
-<html lang="en">
+<!--LUKES PAGE-->
+
+<!DOCTYPE html> <!-- Declares the document type -->
+<html lang="en"> <!-- Starts the HTML document and sets the language to English -->
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Markup of Non marked up page">
-        <meta name="keywords" content="Markup">
-        <meta name="author" content="Your Name">
-        <link rel="stylesheet" href="styles\styles.css">
-        <title>Job Application</title>
+        <!-- Meta tags give info about the page -->
+        <meta charset="UTF-8"> <!-- Sets character encoding -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the page responsive -->
+        <meta name="description" content="Markup of Non marked up page"> <!-- Page description -->
+        <meta name="keywords" content="Markup"> <!-- Keywords for search engines -->
+        <meta name="author" content="Your Name"> <!-- Author of the page -->
+        <link rel="stylesheet" href="styles\styles.css"> <!-- Links external CSS file -->
+        <title>Job Application</title> <!-- Title shown in browser tab -->
     </head>
     <body>
 
         <header> <!--CREDIT TO LUCAS FOR MAKING THE THEME-->
             <div class="center-container">
-                <h1 class="typewriter">Welcome to Optional Programmers</h1>
+                <h1 class="typewriter">Optional Programmers</h1> <!-- Main heading -->
             </div>
             
-    
-            <nav>
+            <nav> <!-- Nav menu -->
                 <a href="about.html">About us</a> 
                 <a href="jobs.html">Job description</a> 
                 <a href="index.html">Index</a> 
             </nav>
-            <hr class="indexhr">
+            <hr class="indexhr"> <!-- Horizontal line for visual separation -->
         </header>
         
-       <!-- <img src="" alt="soon to add" title="belhhh"> -->
+        <!-- <img src="" alt="soon to add" title="belhhh"> --> <!-- Placeholder image, not used yet -->
 
-        
-        <h1>Optional Programmers Job Application Portal</h1>
+        <h1>Job Application Portal</h1>
         <p>This is the job application portal for our company Optional Programmers.</p>
         <p>Please refer to the application below.</p>
         
+        <!-- Form sends data to server when submitted -->
         <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="Apply">
-            <fieldset>
-                <legend>Job Application</legend>
-                    <label for="tutor">Job ID</label>
-                    <select id="tutor" name="tutor" required>
-                        <option value="">Please Select</option>
-                        <option value="Tutor1">G05 - IT Support Technician</option>
-                        <option value="Tutor2">Other</option>
-                    </select>
+            <fieldset> <!-- Group of form fields -->
+                <legend class="appLegend">Job Application</legend>
+                <label for="tutor">Job ID</label>
+                <!-- Dropdown list for selecting job ID -->
+                <select id="tutor" name="tutor" required>
+                    <option value="">Please Select</option>
+                    <option value="Tutor1">G05 - IT Support Technician</option>
+                    <option value="Tutor2">Software Developer</option>
+                </select>
             </fieldset>
-            <br>
-            <br>
+            <br><br>
 
             <fieldset>
-            <legend>Personal Info</legend>
-<!--Name + Surname + gender + birthday-->
-            <legend>Name</legend>
+                <legend class="appLegend"><strong>Personal Info</strong></legend>
+                <!--Name + Surname + gender + birthday-->
+
+                <p>Name</p>
+                <!-- Input for first name -->
                 <label for="GiveName">First Name</label>
                 <input type="text" id="FirstName" name="FirstName" pattern="[A-Za-z]+" title="Only letters allowed" maxlength="19" required>
-                <br>
-                <br>
+                <br><br>
 
+                <!-- Input for last name -->
                 <label for="FamName">Last Name</label>
                 <input type="text" id="LastName" name="LastName" pattern="[A-Za-z]+" title="Only letters allowed" maxlength="19" required>
-                <br>
-                <br>
+                <br><br>
 
-            <legend>Date of Birth</legend>
-                <label for="dob">Date of Birth</label> 
+                <!-- Input for date of birth -->
+                <p>Date of Birth</p>
+                <label for="dob"></label> 
                 <input type="text" name="dob" id="dob" placeholder="dd/mm/yy" pattern="\d{2}/\d{2}/\d{2}" title="Enter date in dd/mm/yy format" required>
-                <br>
-                <br>
+                <br><br>
 
-            <p>Gender</p>
-                <input type="checkbox" id="Male" name="Gender[]" value="Male" >
+                <!-- Checkboxes for gender selection -->
+                <p>Gender</p>
+                <input type="checkbox" id="Male" name="Gender[]" value="Male">
                 <label for="Male">Male</label>
 
-                <input type="checkbox" id="Female" name="Gender[]" value="Female" >
+                <input type="checkbox" id="Female" name="Gender[]" value="Female">
                 <label for="Female">Female</label>
 
-                <input type="checkbox" id="Other" name="Gender[]" value="Other" >
+                <input type="checkbox" id="Other" name="Gender[]" value="Other">
                 <label for="Other">Other</label>
 
-                <input type="checkbox" id="Rather not say" name="Gender[]" value="Rather not say" >
+                <input type="checkbox" id="Rather not say" name="Gender[]" value="Rather not say">
                 <label for="N/A">Rather not say</label>
             </fieldset>
 
+            <br><br>
 
-<!--address info-->
-<fieldset>
-<legend>Address Information  </legend>
-            <br>
-                
+            <!--address info-->
+            <fieldset>
+                <legend class="appLegend">Address Information</legend>
+                <br>
+
+                <!-- Input for street address -->
                 <label for="StrAddr">Street Address</label>
                 <input type="text" id="StrAddr" name="Street Address" maxlength="39" required>
+                <br><br>
 
-
-                <br>
-                <br>
-                <!--could add a database to validate the based on the state then allow only postcodes from thatstate to be validated  -->
+                <!-- Input for suburb -->
                 <label for="Suburb">Suburb</label>
                 <input type="text" id="Suburb" name="Suburb" maxlength="39" required>
-                <br>
-                <br>
+                <br><br>
+                    <!--I wish i could use JAVA-->
+                <!-- Input for postcode -->
                 <label for="Postcode">Postcode</label>
                 <input type="Postcode" id="Postcode" name="PostCode" maxlength="3" required>
-                    <br>
-                    <br>
+                <br><br>
+
+                <!-- Dropdown for state selection -->
                 <label for="state">State:</label>
                 <select id="state" name="State" required>
                     <option value="">Please Select a state</option>
@@ -144,78 +150,82 @@ tested.
                     <option value="Tutor3">Western Austrlia</option>
                     <option value="Tutor3">ACT</option>
                 </select>
+            </fieldset>
 
-</fieldset>
-      
+            <!--Contact info legend-->
+            <fieldset>
+                <legend class="appLegend">Contact Info</legend>
+                <!-- Input for phone number -->
+                <label for="PhNum">Phone Number</label>
+                <input type="text" id="PhNum" name="Phone Number" maxlength="" required>
 
-            
-<!--Contact info legend-->
-<fieldset>
-    <legend>Contact Info</legend>
-            <label for="PhNum">Phone Number</label>
-            <input type="text" id="PhNum" name="Phone Number" maxlength="" required>
-            <label for="EmailAdd">Email Address</label>
-            <input type="text" id="EmailAdd" name="email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-</fieldset>
+                <!-- Input for email with pattern to check email format -->
+                <label for="EmailAdd">Email Address</label>
+                <input type="text" id="EmailAdd" name="email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            </fieldset>
 
-<!--Job information-->
-          <fieldset>
-<legend>Job Related Information</legend>
-<br>
-<br>
+            <!--Job information-->
+            <fieldset>
+                <legend class="appLegend">Job Related Information</legend>
+                <br><br>
 
-<legend>Technical Skills</legend>
-          
-<input type="checkbox" id="Networks" name="Skill[]" value="Networks" checked>
-<label for="Networks">Networks</label>
+                <legend class="appLegend">Technical Skills</legend>
+                <!-- Checkboxes for technical skills -->
+                <input type="checkbox" id="Networks" name="Skill[]" value="Networks" checked>
+                <label for="Networks">Networks</label>
 
-<input type="checkbox" id="Computer Systems" name="Skill[]" value="Computer Systems">
-<label for="Computer Systems">Computer Systems</label>
+                <input type="checkbox" id="Computer Systems" name="Skill[]" value="Computer Systems">
+                <label for="Computer Systems">Computer Systems</label>
 
+                <p>Coding Languages</p>
 
-<p>Coding Languages</p>
+                <!-- Checkboxes for coding skills -->
+                <input type="checkbox" id="HTML" name="issue[]" value="HTML" checked>
+                <label for="HTML">HTML</label>
 
-<input type="checkbox" id="HTML" name="issue[]" value="HTML" checked>
-<label for="HTML">HTML</label>
+                <input type="checkbox" id="CSS" name="issue[]" value="CSS">
+                <label for="CSS">CSS</label>
 
-<input type="checkbox" id="CSS" name="issue[]" value="CSS">
-<label for="CSS">CSS</label>
+                <input type="checkbox" id="JavaScript" name="issue[]" value="JavaScript">
+                <label for="JavaScript">JavaScript</label>
 
-<input type="checkbox" id="JavaScript" name="issue[]" value="JavaScript">
-<label for="JavaScript">JavaScript</label>
+                <br><br>
 
-<!--Voided the multi choice drop box is ugly-->
-<!--<label for="Language">Choose coding languages:</label>
-    <select name="language" id="language" multiple>
-    <option value="CSS">CSS</option>
-    <option value="Java">Java</option>
-    <option value="Ruby">Ruby</option>
-    <option value="Python">Python</option>
-    </select>-->
+                <!-- Text area for other skills -->
+                <label for="Skills">Other Skills</label>
+                <br>
+                <textarea id="Skills" name="Skills" rows="4" cols="30" placeholder="Write any other skills you may have that will help your application..."></textarea>
 
+                <br><br>
 
-<br><br> 
+                <!--Voided the multi choice drop box is ugly-->
+                <!--
+                <label for="Language">Choose coding languages:</label>
+                <select name="language" id="language" multiple>
+                    <option value="CSS">CSS</option>
+                    <option value="Java">Java</option>
+                    <option value="Ruby">Ruby</option>
+                    <option value="Python">Python</option>
+                </select>
+                -->
+            </fieldset>
 
-
-
-
-
-          </fieldset>  
-
-          <input type="submit" value="Apply">
-          <input type="reset" value="Reset Application">
+            <!-- Submit and reset buttons -->
+            <input type="submit" value="Apply">
+            <input type="reset" value="Reset Application">
         </form>
 
+        <br><br><br>
 
-        
-    <footer> <!--CREDIT TO LUCAS -->
-        <p>
-            If you have any further questions<br>
-            please contact us at <a href="info@OptionalProgrammers.com.au">info@OptionalProgrammers.com.au</a>
-        </p>
-        <P>
-            <a href="">Jira</a><a href="">Github</a>
-        </P>
-    </footer>
+        <footer> <!--CREDIT TO LUCAS -->
+            <p>
+                If you have any further questions<br>
+                please contact us at <a href="info@OptionalProgrammers.com.au">info@OptionalProgrammers.com.au</a>
+            </p>
+            <p>
+                <a href="">Jira</a><a href="">Github</a>
+            </p>
+        </footer>
     </body>
 </html>
+
