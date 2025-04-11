@@ -60,6 +60,24 @@ description: styling html webpage
 
 /* General CSS code */
 
+.textcenter {
+    text-align: center;
+}
+
+.hr {
+    height: 8px;
+    border: none;
+    border-radius: 50px;
+    background: #6c63ff;
+    width: 100%;
+    margin: 1em 0;
+}
+
+footer {
+    border-top: 6px double blue;
+    clear: both;
+}
+
 /*Background colour */
 
 
@@ -75,7 +93,6 @@ nav a {
     text-decoration: none;
     padding: 0.5em 0.5em;
     border: 1px solid #ccc;
-    <<<<<<< HEAD margin: 0 0.5em=======margin: 0.5em 0.5em >>>>>>> 901df7fd55da7fb7549d4c79353ce7a8170fc13a
 }
 
 /* Navigation hover effect */
@@ -84,19 +101,6 @@ nav a:hover {
 }
 
 /* Index Page */
-
-.indexhr {
-    height: 8px;
-    border: none;
-    border-radius: 50px;
-    background: #6c63ff;
-    width: 100%;
-    margin: 1em 0;
-}
-
-.indextextcenter {
-    text-align: center;
-}
 
 .listalign {
     display: inline-block;
@@ -142,11 +146,6 @@ nav a:hover {
 
 .center-container {
     text-align: center;
-}
-
-.indexfooter {
-    border-top: 6px double blue;
-    clear: both;
 }
 
 /* About Page */
