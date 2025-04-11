@@ -1,7 +1,42 @@
+<!--This page has a form that allows a potential candidate to register their interest in the advertised
+position. HTML5 data validation should be used to check the user’s input.
+The form will allow a potential applicant to fill in the following:
+Field Format requirement
+Job reference number drop down selection including all jobs ref numbers
+First name max 20 alpha characters
+Last name max 20 alpha characters
+Date of birth dd/mm/yyyy
+Gender radio inputs grouped using a fieldset and legend
+Street Address max 40 characters
+Suburb/town max 40 characters
+State drop down selection from
+VIC,NSW,QLD,NT,WA,SA,TAS,ACT
+Postcode exactly 4 digits based on States
+Email address validate format with regular expression & patterns
+Phone number 8 to 12 digits, or spaces
+Required technical list checkbox inputs
+Other skills textarea
+All inputs should have labels. All form values, except the "Other Skills" textarea are ‘required’ or
+have a default value (e.g. select and checkbox inputs). The user should not be able to submit the
+form if any of these required fields are blank or incorrectly filled.
+Data Submission to Server
+The form should have a submit button labelled “Apply”. When this button is clicked the name-
+values from the associated form should be sent to the server using the post http method. The
+server action address is https://mercury.swin.edu.au/it000000/formtest.php. The server will then
+just echo back the name value pairs to the client. While nothing will be stored on the server in
+this part of the assignment (we will do this in Part 2) this will allow the form submission to be
+tested.
+-->
+
+<!--LUKES PAGE-->
+
+<!--LUKES PAGE-->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Meta tags give info about the page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Job application form">
@@ -11,16 +46,16 @@
 </head>
 
 <body class="applybody">
-    <header>
+    <header> <!--CREDIT TO LUCAS FOR MAKING THE THEME-->
         <div class="center-container">
-            <h1 class="typewriter">Optional Programmers</h1>
+            <h1 class="typewriter">Optional Programmers</h1> <!-- Main heading -->
         </div>
-        <nav>
+        <nav> <!-- Nav menu -->
             <a href="about.html">About us</a>
             <a href="jobs.html">Job description</a>
             <a href="index.html">Index</a>
         </nav>
-        <hr class="indexhr">
+        <hr class="indexhr"> <!-- Horizontal line for visual separation -->
     </header>
 
     <section class="entirepage">
@@ -31,29 +66,34 @@
         </section>
 
         <section class="jobform">
+            <!-- Form sends data to server when submitted -->
             <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
-                <fieldset>
+                <fieldset> <!-- Group of form fields -->
                     <legend class="appLegend">Job Application</legend>
+                    <!-- Dropdown list for selecting job ID -->
                     <label for="jobid">Job ID</label>
                     <select id="jobid" name="jobid" required>
                         <option value="">Please Select</option>
                         <option value="G05">G05 - IT Support Technician</option>
-                        <option value="G06">N/A - Software Developer</option>
+                        <option value="G06">G06 - Software Developer</option>
                     </select>
                 </fieldset>
 
                 <fieldset>
                     <legend class="appLegend">Personal Info</legend>
-
+                    <!-- Input for first name -->
                     <label for="firstname">First Name</label>
                     <input type="text" id="firstname" name="firstname" pattern="[A-Za-z]{1,20}" maxlength="20" required>
 
+                    <!-- Input for last name -->
                     <label for="lastname">Last Name</label>
                     <input type="text" id="lastname" name="lastname" pattern="[A-Za-z]{1,20}" maxlength="20" required>
 
+                    <!-- Input for date of birth -->
                     <label for="dob">Date of Birth</label>
                     <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required>
 
+                    <!-- Radio buttons for gender -->
                     <fieldset>
                         <legend>Gender</legend>
                         <input type="radio" id="male" name="gender" value="Male" required><label for="male">Male</label>
@@ -65,12 +105,19 @@
 
                 <fieldset>
                     <legend class="appLegend">Address Information</legend>
+                    <!-- Input for street address -->
                     <label for="street">Street Address</label>
                     <input type="text" id="street" name="street" maxlength="40" required>
 
+                    <!-- Input for suburb -->
                     <label for="suburb">Suburb/Town</label>
                     <input type="text" id="suburb" name="suburb" maxlength="40" required>
 
+                    <!-- Input for postcode -->
+                    <label for="postcode">Postcode</label>
+                    <input type="text" id="postcode" name="postcode" pattern="\d{4}" required>
+
+                    <!-- Dropdown for state selection -->
                     <label for="state">State</label>
                     <select id="state" name="state" required>
                         <option value="">Select State</option>
@@ -83,22 +130,22 @@
                         <option value="TAS">TAS</option>
                         <option value="ACT">ACT</option>
                     </select>
-
-                    <label for="postcode">Postcode</label>
-                    <input type="text" id="postcode" name="postcode" pattern="\d{4}" required>
                 </fieldset>
 
                 <fieldset>
                     <legend class="appLegend">Contact Info</legend>
+                    <!-- Input for phone number -->
                     <label for="phone">Phone Number</label>
                     <input type="text" id="phone" name="phone" pattern="[\d\s]{8,12}" required>
 
+                    <!-- Input for email address -->
                     <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" required>
                 </fieldset>
 
                 <fieldset>
                     <legend class="appLegend">Job Related Information</legend>
+                    <!-- Checkboxes for technical skills -->
                     <p>Technical Skills</p>
                     <input type="checkbox" id="networks" name="skills[]" value="Networks" checked>
                     <label for="networks">Networks</label>
@@ -106,6 +153,7 @@
                     <input type="checkbox" id="systems" name="skills[]" value="Computer Systems">
                     <label for="systems">Computer Systems</label>
 
+                    <!-- Checkboxes for coding skills -->
                     <p>Coding Languages</p>
                     <input type="checkbox" id="html" name="languages[]" value="HTML" checked>
                     <label for="html">HTML</label>
@@ -116,19 +164,22 @@
                     <input type="checkbox" id="js" name="languages[]" value="JavaScript">
                     <label for="js">JavaScript</label>
 
+                    <!-- Text area for other skills -->
                     <label for="otherskills">Other Skills</label>
-                    <textarea id="otherskills" name="otherskills" rows="4" cols="30" placeholder="Write any other skills..."></textarea>
+                    <textarea id="otherskills" name="otherskills" rows="4" cols="30" placeholder="Write any other skills you may have that will help your application..."></textarea>
                 </fieldset>
 
+                <!-- Submit and reset buttons -->
                 <input type="submit" value="Apply">
                 <input type="reset" value="Reset Application">
             </form>
         </section>
     </section>
 
-    <footer>
-        <p>If you have any further questions<br>
-            contact us at <a href="mailto:info@OptionalProgrammers.com.au">info@OptionalProgrammers.com.au</a>
+    <footer> <!--CREDIT TO LUCAS -->
+        <p>
+            If you have any further questions<br>
+            please contact us at <a href="mailto:info@OptionalProgrammers.com.au">info@OptionalProgrammers.com.au</a>
         </p>
         <p><a href="#">Jira</a> <a href="#">Github</a></p>
     </footer>
