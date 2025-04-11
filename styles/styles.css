@@ -67,7 +67,7 @@ description: styling html webpage
 .hr {
     height: 8px;
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
     background: #6c63ff;
     width: 100%;
     margin-top: 1em 0;
@@ -189,21 +189,28 @@ nav a:hover {
 
 /* Apply Page */
 
-.appLegend {font-weight: bold;}
+.appLegend {
+    font-weight: bold;
+}
 
-.jobform { height: 100%;
-    margin: 0;
+.jobform {
+    height: 100%;
+    margin: auto;
     display: flex;
     justify-content: center;
-    align-items: center;}
+    align-items: center;
+}
 
-.pagetop{text-align: center;}
+.pagetop {
+    text-align: center;
+}
 
-.entirepage{
+.entirepage {
     text-decoration: black;
     border-left: double 6px blue;
     border-right: double 6px blue;
     margin-right: 25%;
     margin-left: 25%;
 }
+
 /* Jobs Page */
