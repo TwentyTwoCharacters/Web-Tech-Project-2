@@ -60,6 +60,8 @@ description: styling html webpage
 
 /* General CSS code */
 
+header{position: sticky;}
+
 .textcenter {
     text-align: center;
 }
