@@ -109,6 +109,7 @@ nav a:hover {
 
 .typewriter {
     display: inline-block;
+    /* Fixes the width of the typing */
     font-size: 32px;
     /* Make the text big and readable */
     white-space: nowrap;
