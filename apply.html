@@ -113,10 +113,14 @@ tested.
                 <!--could add a database to validate the based on the state then allow only postcodes from thatstate to be validated  -->
                 <label for="Suburb">Suburb</label>
                 <input type="text" id="Suburb" name="Suburb" maxlength="39" required>
+                <br>
+                <br>
+                <label for="">Postcode</label>
+                <input type="Postcode" id="Postcode" name="PostCode" maxlength="3" required>
                     <br>
                     <br>
                 <label for="state">State:</label>
-                <select id="state" name="Stae" required>
+                <select id="state" name="State" required>
                     <option value="">Please Select a state</option>
                     <option value="Tutor1">Victoria</option>
                     <option value="Tutor2">NSW</option>
@@ -149,20 +153,21 @@ tested.
 
 <legend>Technical Skills</legend>
           
-<input type="checkbox" id="Networks" name="issue[]" value="Networks" checked>
+<input type="checkbox" id="Networks" name="Skill[]" value="Networks" checked>
 <label for="Networks">Networks</label>
 
-<input type="checkbox" id="Computer Systems" name="issue[]" value="Computer Systems">
-<label for="Computer Systems">CSS</label>
+<input type="checkbox" id="Computer Systems" name="Skill[]" value="Computer Systems">
+<label for="Computer Systems">Computer Systems</label>
+<br>
+<br>
+<label for="Language">Choose coding languages:</label>
+    <select name="language" id="language" multiple>
+    <option value="CSS">CSS</option>
+    <option value="Java">Java</option>
+    <option value="Ruby">Ruby</option>
+    <option value="Python">Python</option>
+    </select>
 
-<input type="checkbox" id="JavaScript" name="issue[]" value="JavaScript">
-<label for="JavaScript">JavaScript</label>
-
-<input type="checkbox" id="PHP" name="issue[]" value="PHP">
-<label for="PHP">PHP</label>
-
-<input type="checkbox" id="MySQL" name="issue[]" value="MySQL">
-<label for="MySQL">MySQL</label>
 
 <br><br> 
 
