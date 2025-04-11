@@ -69,14 +69,15 @@ tested.
         <section class="jobform">
             <!-- Form sends data to server when submitted -->
             <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
-                <fieldset> <!-- Group of form fields -->
+                <fieldset> 
                     <legend class="appLegend">Job Application</legend>
+                    
                     <!-- Dropdown list for selecting job ID -->
                     <label for="jobid">Job ID</label><br>
                     <select id="jobid" name="jobid" required>
                         <option value="">Please Select</option>
                         <option value="G05">G05 - IT Support Technician</option>
-                        <option value="G06">G06 - Software Developer</option>
+                        <option value="N/A">N/A - Software Developer</option>
                     </select>
                 </fieldset>
 
@@ -85,11 +86,11 @@ tested.
                     <legend class="appLegend">Personal Info</legend>
                     <!-- Input for first name -->
                     <label for="firstname">First Name</label><br>
-                    <input type="text" id="firstname" name="firstname" pattern="[A-Za-z]{1,20}" maxlength="20" required><br><br>
+                    <input type="text" id="firstname" name="firstname" pattern="[A-Za-z]" maxlength="20" required><br><br>
 
                     <!-- Input for last name -->
                     <label for="lastname">Last Name</label><br>
-                    <input type="text" id="lastname" name="lastname" pattern="[A-Za-z]{1,20}" maxlength="20" required><br><br>
+                    <input type="text" id="lastname" name="lastname" pattern="[A-Za-z]" maxlength="20" required><br><br>
 
                     <!-- Input for date of birth -->
                     <label for="dob">Date of Birth</label><br>
