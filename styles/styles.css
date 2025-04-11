@@ -195,8 +195,16 @@ nav a:hover {
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-border: black,2px auto;}
+    align-items: center;}
 
 .pagetop{text-align: center;}
+
+.entirepage{margin: auto;
+    border-style: groove;
+    border-color: black;
+    border: 2px;
+
+
+
+}
 /* Jobs Page */
