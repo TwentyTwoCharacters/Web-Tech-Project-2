@@ -149,13 +149,7 @@ nav a:hover {
 }
 
 /* About Page */
-/* Center the table within the section */
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+
 
 /* Style the table in file1.html */
 .table-file1 {
