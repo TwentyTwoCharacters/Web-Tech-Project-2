@@ -196,19 +196,24 @@ nav a:hover {
 }
 
 .jobform {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 90%;              
+    margin: auto;             
+    padding: 20px;            
+    box-sizing: border-box;  
 }
 
 .pagetop {
     text-align: center;
 }
 
-.entirepage{
+.entirepage {
     border-left: double 5px blue;
     border-right: double 5px blue;
     margin-right: 25%;
     margin-left: 25%;
+    padding: 10px;          
+    box-sizing: border-box;
 }
+
+
 /* Jobs Page */
