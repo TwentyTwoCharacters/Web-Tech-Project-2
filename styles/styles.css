@@ -60,6 +60,8 @@ description: styling html webpage
 
 /* General CSS code */
 
+header{position: sticky;}
+
 .textcenter {
     text-align: center;
 }
@@ -193,9 +195,8 @@ nav a:hover {
     font-weight: bold;
 }
 
-.jobform {
-    height: 100%;
-    margin: auto;
+.jobform { height: 100%;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -205,10 +206,9 @@ nav a:hover {
     text-align: center;
 }
 
-.entirepage {
-    margin-top: 0;
-    border-left: double 6px blue;
-    border-right: double 6px blue;
+.entirepage{
+    border-left: solid 5px black;
+    border-right: solid 5px black;
     margin-right: 25%;
     margin-left: 25%;
 }
