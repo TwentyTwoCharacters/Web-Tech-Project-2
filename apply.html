@@ -72,7 +72,7 @@ tested.
                 <fieldset> <!-- Group of form fields -->
                     <legend class="appLegend">Job Application</legend>
                     <!-- Dropdown list for selecting job ID -->
-                    <label for="jobid">Job ID</label>
+                    <label for="jobid">Job ID</label><br>
                     <select id="jobid" name="jobid" required>
                         <option value="">Please Select</option>
                         <option value="G05">G05 - IT Support Technician</option>
@@ -80,46 +80,52 @@ tested.
                     </select>
                 </fieldset>
 
+                <br>
                 <fieldset>
                     <legend class="appLegend">Personal Info</legend>
                     <!-- Input for first name -->
-                    <label for="firstname">First Name</label>
-                    <input type="text" id="firstname" name="firstname" pattern="[A-Za-z]{1,20}" maxlength="20" required>
+                    <label for="firstname">First Name</label><br>
+                    <input type="text" id="firstname" name="firstname" pattern="[A-Za-z]{1,20}" maxlength="20" required><br><br>
 
                     <!-- Input for last name -->
-                    <label for="lastname">Last Name</label>
-                    <input type="text" id="lastname" name="lastname" pattern="[A-Za-z]{1,20}" maxlength="20" required>
+                    <label for="lastname">Last Name</label><br>
+                    <input type="text" id="lastname" name="lastname" pattern="[A-Za-z]{1,20}" maxlength="20" required><br><br>
 
                     <!-- Input for date of birth -->
-                    <label for="dob">Date of Birth</label>
-                    <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required>
+                    <label for="dob">Date of Birth</label><br>
+                    <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required><br><br>
 
                     <!-- Radio buttons for gender -->
                     <fieldset>
                         <legend>Gender</legend>
-                        <input type="radio" id="male" name="gender" value="Male" required><label for="male">Male</label>
-                        <input type="radio" id="female" name="gender" value="Female"><label for="female">Female</label>
-                        <input type="radio" id="other" name="gender" value="Other"><label for="other">Other</label>
-                        <input type="radio" id="notsay" name="gender" value="Rather not say"><label for="notsay">Rather not say</label>
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label><br>
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label><br>
+                        <input type="radio" id="other" name="gender" value="Other">
+                        <label for="other">Other</label><br>
+                        <input type="radio" id="notsay" name="gender" value="Rather not say">
+                        <label for="notsay">Rather not say</label>
                     </fieldset>
                 </fieldset>
 
+                <br>
                 <fieldset>
                     <legend class="appLegend">Address Information</legend>
                     <!-- Input for street address -->
-                    <label for="street">Street Address</label>
-                    <input type="text" id="street" name="street" maxlength="40" required>
+                    <label for="street">Street Address</label><br>
+                    <input type="text" id="street" name="street" maxlength="40" required><br><br>
 
                     <!-- Input for suburb -->
-                    <label for="suburb">Suburb/Town</label>
-                    <input type="text" id="suburb" name="suburb" maxlength="40" required>
+                    <label for="suburb">Suburb/Town</label><br>
+                    <input type="text" id="suburb" name="suburb" maxlength="40" required><br><br>
 
                     <!-- Input for postcode -->
-                    <label for="postcode">Postcode</label>
-                    <input type="text" id="postcode" name="postcode" pattern="\d{4}" required>
+                    <label for="postcode">Postcode</label><br>
+                    <input type="text" id="postcode" name="postcode" pattern="\d{4}" required><br><br>
 
                     <!-- Dropdown for state selection -->
-                    <label for="state">State</label>
+                    <label for="state">State</label><br>
                     <select id="state" name="state" required>
                         <option value="">Select State</option>
                         <option value="VIC">VIC</option>
@@ -133,23 +139,25 @@ tested.
                     </select>
                 </fieldset>
 
+                <br>
                 <fieldset>
                     <legend class="appLegend">Contact Info</legend>
                     <!-- Input for phone number -->
-                    <label for="phone">Phone Number</label>
-                    <input type="text" id="phone" name="phone" pattern="[\d\s]{8,12}" required>
+                    <label for="phone">Phone Number</label><br>
+                    <input type="text" id="phone" name="phone" pattern="[\d\s]{8,12}" required><br><br>
 
                     <!-- Input for email address -->
-                    <label for="email">Email Address</label>
+                    <label for="email">Email Address</label><br>
                     <input type="email" id="email" name="email" required>
                 </fieldset>
 
+                <br>
                 <fieldset>
                     <legend class="appLegend">Job Related Information</legend>
                     <!-- Checkboxes for technical skills -->
                     <p>Technical Skills</p>
                     <input type="checkbox" id="networks" name="skills[]" value="Networks" checked>
-                    <label for="networks">Networks</label>
+                    <label for="networks">Networks</label><br>
 
                     <input type="checkbox" id="systems" name="skills[]" value="Computer Systems">
                     <label for="systems">Computer Systems</label>
@@ -157,19 +165,20 @@ tested.
                     <!-- Checkboxes for coding skills -->
                     <p>Coding Languages</p>
                     <input type="checkbox" id="html" name="languages[]" value="HTML" checked>
-                    <label for="html">HTML</label>
+                    <label for="html">HTML</label><br>
 
                     <input type="checkbox" id="css" name="languages[]" value="CSS">
-                    <label for="css">CSS</label>
+                    <label for="css">CSS</label><br>
 
                     <input type="checkbox" id="js" name="languages[]" value="JavaScript">
-                    <label for="js">JavaScript</label>
+                    <label for="js">JavaScript</label><br><br>
 
                     <!-- Text area for other skills -->
-                    <label for="otherskills">Other Skills</label>
+                    <label for="otherskills">Other Skills</label><br>
                     <textarea id="otherskills" name="otherskills" rows="4" cols="30" placeholder="Write any other skills you may have that will help your application..."></textarea>
                 </fieldset>
 
+                <br>
                 <!-- Submit and reset buttons -->
                 <input type="submit" value="Apply">
                 <input type="reset" value="Reset Application">
