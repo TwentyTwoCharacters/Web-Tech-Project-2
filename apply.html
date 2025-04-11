@@ -34,29 +34,31 @@ tested.
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Markup of Non marked up page">
         <meta name="keywords" content="Markup">
         <meta name="author" content="Your Name">
+        <link rel="stylesheet" href="styles\styles.css">
         <title>Job Application</title>
     </head>
     <body>
        
         
-       <!-- <img src="" alt="Swinburne Logo" title="Swinburne"> -->
+       <!-- <img src="" alt="soon to add" title="belhhh"> -->
 
         
         <h1>Optional Programmers Job Application Portal</h1>
         <p>This is the job application portal for our company Optional Programmers.</p>
         <p>Please refer to the application below.</p>
         
-        <form action="http://mercury.swin.edu.au/it000000/formtest.php" method="submit">
+        <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="Apply">
             <fieldset>
                 <legend>Job Application</legend>
                     <label for="tutor">Job ID</label>
                     <select id="tutor" name="tutor" required>
                         <option value="">Please Select</option>
                         <option value="Tutor1">G05 - IT Support Technician</option>
-                        <option value="Tutor2">unknown as of now</option>
+                        <option value="Tutor2">Other</option>
                     </select>
             </fieldset>
             <br>
@@ -106,17 +108,77 @@ tested.
                 <input type="text" id="StrAddr" name="Street Address" maxlength="39" required>
 
 
-
+                <br>
+                <br>
+                <!--could add a database to validate the based on the state then allow only postcodes from thatstate to be validated  -->
+                <label for="Suburb">Suburb</label>
+                <input type="text" id="Suburb" name="Suburb" maxlength="39" required>
+                <br>
+                <br>
+                <label for="">Postcode</label>
+                <input type="Postcode" id="Postcode" name="PostCode" maxlength="3" required>
+                    <br>
+                    <br>
+                <label for="state">State:</label>
+                <select id="state" name="State" required>
+                    <option value="">Please Select a state</option>
+                    <option value="Tutor1">Victoria</option>
+                    <option value="Tutor2">NSW</option>
+                    <option value="Tutor3">Tasmania</option>
+                    <option value="Tutor3">Queensland</option>
+                    <option value="Tutor3">Northern Territory</option>
+                    <option value="Tutor3">South Australia</option>
+                    <option value="Tutor3">Western Austrlia</option>
+                    <option value="Tutor3">ACT</option>
+                </select>
 
 </fieldset>
       
 
             
 <!--Contact info legend-->
-
+<fieldset>
+    <legend>Contact Info</legend>
+            <label for="PhNum">Phone Number</label>
+            <input type="text" id="PhNum" name="Phone Number" maxlength="" required>
+            <label for="EmailAdd">Email Address</label>
+            <input type="text" id="EmailAdd" name="email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+</fieldset>
 
 <!--Job information-->
-            
+          <fieldset>
+<legend>Job Related Information</legend>
+<br>
+<br>
+
+<legend>Technical Skills</legend>
+          
+<input type="checkbox" id="Networks" name="Skill[]" value="Networks" checked>
+<label for="Networks">Networks</label>
+
+<input type="checkbox" id="Computer Systems" name="Skill[]" value="Computer Systems">
+<label for="Computer Systems">Computer Systems</label>
+<br>
+<br>
+<label for="Language">Choose coding languages:</label>
+    <select name="language" id="language" multiple>
+    <option value="CSS">CSS</option>
+    <option value="Java">Java</option>
+    <option value="Ruby">Ruby</option>
+    <option value="Python">Python</option>
+    </select>
+
+
+<br><br> 
+
+
+
+
+
+          </fieldset>  
+
+          <input type="Apply" value="Book">
+          <input type="reset" value="Reset Application">
         </form>
     </body>
 </html>
