@@ -60,6 +60,24 @@ description: styling html webpage
 
 /* General CSS code */
 
+.textcenter {
+    text-align: center;
+}
+
+.hr {
+    height: 8px;
+    border: none;
+    border-radius: 50px;
+    background: #6c63ff;
+    width: 100%;
+    margin: 1em 0;
+}
+
+footer {
+    border-top: 6px double blue;
+    clear: both;
+}
+
 /*Background colour */
 
 
@@ -75,7 +93,6 @@ nav a {
     text-decoration: none;
     padding: 0.5em 0.5em;
     border: 1px solid #ccc;
-    <<<<<<< HEAD margin: 0 0.5em=======margin: 0.5em 0.5em >>>>>>> 901df7fd55da7fb7549d4c79353ce7a8170fc13a
 }
 
 /* Navigation hover effect */
@@ -84,19 +101,6 @@ nav a:hover {
 }
 
 /* Index Page */
-
-.indexhr {
-    height: 8px;
-    border: none;
-    border-radius: 50px;
-    background: #6c63ff;
-    width: 100%;
-    margin: 1em 0;
-}
-
-.indextextcenter {
-    text-align: center;
-}
 
 .listalign {
     display: inline-block;
@@ -144,38 +148,47 @@ nav a:hover {
     text-align: center;
 }
 
-.indexfooter {
-    border-top: 6px double blue;
-    clear: both;
-}
-
 /* About Page */
-
-
-body {
-    font-family: Arial, sans-serif;
-
+/* Center the table within the section */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+/* Style the table in file1.html */
+.table-file1 {
+    border-collapse: collapse;
+    /* Ensures no gaps between table cells */
+    width: 80%;
+    /* Adjust the width of the table */
+    margin: 20px 0;
+}
 
-figure {
+.table-file1 th {
+    font-weight: bold;
+    background-color: #4CAF50;
+    /* Green background for headings */
+    color: white;
+    padding: 10px;
     text-align: center;
 }
 
-
-table,
-th,
-td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 8px;
+.table-file1 td {
+    background-color: #f2f2f2;
+    /* Light grey background for table cells */
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover effect */
 }
 
-
-caption {
-    font-weight: bold;
-    margin-bottom: 5px;
+.table-file1 td:hover {
+    background-color: #ddd;
+    /* Darker grey when hovered */
 }
+
 
 
 
