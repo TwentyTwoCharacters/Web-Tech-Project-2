@@ -200,11 +200,7 @@ nav a:hover {
 .pagetop{text-align: center;}
 
 .entirepage{
-    border-style:solid 5px;
-    border-left: 5px black;
-    border-right: 5px black;
-
-
-
+    border-left: solid 5px black;
+    border-right: solid 5px black;
 }
 /* Jobs Page */
