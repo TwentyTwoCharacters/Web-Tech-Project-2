@@ -60,7 +60,9 @@ description: styling html webpage
 
 /* General CSS code */
 
-header{position: sticky;}
+header{position: sticky;
+    background: linear-gradient(0.25turn, #1f8fff, #00bfff, #85cdfa, #00bfff, #1f8fff);
+      }
 
 .textcenter {
     text-align: center;
@@ -69,15 +71,19 @@ header{position: sticky;}
 .hr {
     height: 8px;
     border: none;
-    border-radius: 10px;
     background: #6c63ff;
     width: 100%;
     margin-top: 1em;
 }
 
 footer {
-    border-top: 6px double blue;
-    clear: both;
+    height: 8px;
+    border: none;
+    background: #6c63ff;
+    width: 100%;
+    margin: auto;
+    border-bottom: black 2px;
+
 }
 
 /*Background colour */
@@ -92,14 +98,15 @@ nav {
 
 /* Navigation links styling */
 nav a {
-    text-decoration: none;
+    text-decoration: none black;
     padding: 0.5em 0.5em;
-    border: 1px solid #ccc;
+    border: 1px solid darkgray;
+    background:lightgray;
 }
 
 /* Navigation hover effect */
 nav a:hover {
-    border: 4px solid blue;
+    border: 4px solid black;
     transition: border 0.4s ease;
 }
 
@@ -226,8 +233,8 @@ fieldset {
 .form-button {
     text-decoration: none;
     padding: 0.5em 0.5em;
-    border: 1px solid #ccc;
-    background: none;
+    border: 1px solid darkgray;
+    background: lightgray;
     font: inherit;
     cursor: pointer;
     margin-right: 10px;
@@ -235,7 +242,7 @@ fieldset {
 }
 
 .form-button:hover {
-    border: 4px solid blue;
+    border: 4px solid black;
 }
 
 
