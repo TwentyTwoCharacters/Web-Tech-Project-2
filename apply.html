@@ -42,7 +42,20 @@ tested.
         <title>Job Application</title>
     </head>
     <body>
-       
+
+        <header> <!--CREDIT TO LUCAS FOR MAKING THE THEME-->
+            <div class="center-container">
+                <h1 class="typewriter">Welcome to Optional Programmers</h1>
+            </div>
+            
+    
+            <nav>
+                <a href="about.html">About us</a> 
+                <a href="jobs.html">Job description</a> 
+                <a href="index.html">Index</a> 
+            </nav>
+            <hr class="indexhr">
+        </header>
         
        <!-- <img src="" alt="soon to add" title="belhhh"> -->
 
@@ -84,7 +97,7 @@ tested.
                 <br>
                 <br>
 
-            <legend>Gender</legend>
+            <p>Gender</p>
                 <input type="checkbox" id="Male" name="Gender[]" value="Male" >
                 <label for="Male">Male</label>
 
@@ -115,7 +128,7 @@ tested.
                 <input type="text" id="Suburb" name="Suburb" maxlength="39" required>
                 <br>
                 <br>
-                <label for="">Postcode</label>
+                <label for="Postcode">Postcode</label>
                 <input type="Postcode" id="Postcode" name="PostCode" maxlength="3" required>
                     <br>
                     <br>
@@ -158,15 +171,27 @@ tested.
 
 <input type="checkbox" id="Computer Systems" name="Skill[]" value="Computer Systems">
 <label for="Computer Systems">Computer Systems</label>
-<br>
-<br>
-<label for="Language">Choose coding languages:</label>
+
+
+<p>Coding Languages</p>
+
+<input type="checkbox" id="HTML" name="issue[]" value="HTML" checked>
+<label for="HTML">HTML</label>
+
+<input type="checkbox" id="CSS" name="issue[]" value="CSS">
+<label for="CSS">CSS</label>
+
+<input type="checkbox" id="JavaScript" name="issue[]" value="JavaScript">
+<label for="JavaScript">JavaScript</label>
+
+<!--Voided the multi choice drop box is ugly-->
+<!--<label for="Language">Choose coding languages:</label>
     <select name="language" id="language" multiple>
     <option value="CSS">CSS</option>
     <option value="Java">Java</option>
     <option value="Ruby">Ruby</option>
     <option value="Python">Python</option>
-    </select>
+    </select>-->
 
 
 <br><br> 
@@ -177,7 +202,7 @@ tested.
 
           </fieldset>  
 
-          <input type="Apply" value="Book">
+          <input type="submit" value="Apply">
           <input type="reset" value="Reset Application">
         </form>
     </body>
