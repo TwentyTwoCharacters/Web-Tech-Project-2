@@ -199,10 +199,8 @@ nav a:hover {
 
 .pagetop{text-align: center;}
 
-.entirepage{margin: auto;
-    border-style: groove;
-    border-color: black;
-    border: 2px;
+.entirepage{border-left: 5px black;
+    border-right: 5px black;
 
 
 
