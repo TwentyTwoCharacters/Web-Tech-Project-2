@@ -86,7 +86,7 @@ footer{
 
 
 .entirepage {
-    border: solid 5px black;
+    border: ridge 10px black;
     margin-right: 25%;
     margin-left: 25%;
     padding: 10px;          
@@ -117,10 +117,13 @@ nav {
 
 /* Navigation links styling */
 nav a {
+    position:fixed top center;
     text-decoration: none black;
-    padding: 0.5em 0.5em;
+    padding: 1em 1em;
     border: 1px solid darkgray;
     background:lightgray;
+    border-radius: 5px;
+    margin: 3px;
 }
 
 /* Navigation hover effect */
