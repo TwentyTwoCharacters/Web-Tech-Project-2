@@ -334,3 +334,18 @@ main.entirepage {
     box-sizing: border-box;
     }
 
+/* Flex container for job layout */
+.job-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+/* Job content takes ~70% */
+.job-content {
+    flex: 1 1 70%;
+  }
+
+ 
+  
