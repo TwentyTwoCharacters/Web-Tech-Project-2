@@ -52,12 +52,12 @@ tested.
                 <h1 class="typewriter">Optional Programmers</h1>
             </div>
         </div>
-        <nav> <!-- Nav menu -->
+        <nav> <!-- Nav men -->
             <a href="jobs.html"><img src="images/briefcase.png" width="18" height="18" alt="Job Icon"> Job Description</a>
             <a href="about.html"><img src="images/user.png" width="18" height="18" alt="User Icon"> About us</a>
             <a href="index.html"><img src="images/home.png" width="18" height="18" alt="Home Icon"> Index</a>
         </nav>
-        <hr class="hr"> <!-- Horizontal line for visual separation -->
+        <hr class="hr"> <!--header seperator css-->
     </header>
 
     <section class="entirepage">
@@ -69,12 +69,12 @@ tested.
         </section>
 
         <section class="jobform">
-            <!-- Form sends data to server when submitted -->
+           <!--the swinburne form server thingo -->
             <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
                 <fieldset> 
                     <legend class="appLegend">Job Application</legend>
 
-                    <!-- Dropdown list for selecting job ID -->
+                    <!-- Applied Job dropbox -->
                     <label for="jobid">Job ID</label><br>
                     <select id="jobid" name="jobid" required>
                         <option value="">Please Select</option>
@@ -85,20 +85,21 @@ tested.
 
                 <br>
                 <fieldset>
+                    <!--personal details (names + dob + gender)-->
                     <legend class="appLegend">Personal Info</legend>
-                    <!-- Input for first name -->
+                    <!--first name -->
                     <label for="firstname">First Name</label><br>
                     <input type="text" id="firstname" name="firstname" pattern="[A-Za-z]" maxlength="20" required><br><br>
 
-                    <!-- Input for last name -->
+                    <!-- last name -->
                     <label for="lastname">Last Name</label><br>
                     <input type="text" id="lastname" name="lastname" pattern="[A-Za-z]" maxlength="20" required><br><br>
 
-                    <!-- Input for date of birth -->
+                    <!-- dob -->
                     <label for="dob">Date of Birth</label><br>
                     <input type="text" id="dob" name="dob" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required><br><br>
 
-                    <!-- Radio buttons for gender -->
+                    <!-- we love radio buttons (irrelevant comment :D)-->
                     <fieldset>
                         <legend>Gender</legend>
                         <input type="radio" id="male" name="gender" value="Male" required>
@@ -113,21 +114,23 @@ tested.
                 </fieldset>
 
                 <br>
+                <!--customers home address kinda stalker like tbh-->
                 <fieldset>
                     <legend class="appLegend">Address Information</legend>
-                    <!-- Input for street address -->
+                    <!-- street address -->
                     <label for="street">Street Address</label><br>
                     <input type="text" id="street" name="street" maxlength="40" required><br><br>
 
-                    <!-- Input for suburb -->
+                    <!-- suburb -->
                     <label for="suburb">Suburb/Town</label><br>
                     <input type="text" id="suburb" name="suburb" maxlength="40" required><br><br>
 
-                    <!-- Input for postcode -->
+                    <!--postcode OMG IF I COULD USE JAVASCRIPT FOR THIS I WOULD OF LOVED TO CODE THE POSTCODE 
+                    AND STATE TO THE AUSPOST DATABASE SO IT VALIDATES IF THE POSTCODE IS IN TYHE CORRECT STATE!!!-->
                     <label for="postcode">Postcode</label><br>
                     <input type="text" id="postcode" name="postcode" pattern="\d{4}" required><br><br>
 
-                    <!-- Dropdown for state selection -->
+                    <!-- state selection (victoria on top ong) -->
                     <label for="state">State</label><br>
                     <select id="state" name="state" required>
                         <option value="">Select State</option>
@@ -145,11 +148,11 @@ tested.
                 <br>
                 <fieldset>
                     <legend class="appLegend">Contact Info</legend>
-                    <!-- Input for phone number -->
+                    <!-- phone number (pick up da phone) -->
                     <label for="phone">Phone Number</label><br>
                     <input type="text" id="phone" name="phone" pattern="[\d\s]{8,12}" required><br><br>
 
-                    <!-- Input for email address -->
+                    <!-- email address -->
                     <label for="email">Email Address</label><br>
                     <input type="email" id="email" name="email" required>
                 </fieldset>
@@ -157,7 +160,7 @@ tested.
                 <br>
                 <fieldset>
                     <legend class="appLegend">Job Related Information</legend>
-                    <!-- Checkboxes for technical skills -->
+                    <!-- technical skills -->
                     <p>Technical Skills</p>
                     <input type="checkbox" id="networks" name="skills[]" value="Networks" checked>
                     <label for="networks">Networks</label><br>
@@ -165,7 +168,7 @@ tested.
                     <input type="checkbox" id="systems" name="skills[]" value="Computer Systems">
                     <label for="systems">Computer Systems</label>
 
-                    <!-- Checkboxes for coding skills -->
+                    <!-- coding skills (i guess you needa be decent in coding for both roles) -->
                     <p>Coding Languages</p>
                     <input type="checkbox" id="html" name="languages[]" value="HTML" checked>
                     <label for="html">HTML</label><br>
@@ -176,13 +179,13 @@ tested.
                     <input type="checkbox" id="js" name="languages[]" value="JavaScript">
                     <label for="js">JavaScript</label><br><br>
 
-                    <!-- Text area for other skills -->
+                    <!-- text area for other skills (holy yap) -->
                     <label for="otherskills">Other Skills</label><br>
                     <textarea id="otherskills" name="otherskills" rows="4" cols="30" placeholder="Write any other skills you may have that will help your application..."></textarea>
                 </fieldset>
 
                 <br>
-                <!-- Submit and reset buttons -->
+                <!-- applition submit and reset -->
                 <input type="submit" value="Apply" class="form-button">
                 <input type="reset" value="Reset Application" class="form-button">
             </form>
