@@ -382,4 +382,10 @@ aside {
     .job-layout {
       flex-direction: column;
     }
-
+  
+    .job-content,
+    aside {
+      flex: 1 1 100%;
+      position: static;
+    }
+  }
