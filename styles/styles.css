@@ -67,7 +67,7 @@ description: styling html webpage
 
 header {
     position: sticky;
-    background: linear-gradient(0.25turn, #1f8fff, #00bfff, #85cdfa, #00bfff, #1f8fff);
+    background: rgb(242, 243, 234)
 }
 
 .textcenter {
@@ -124,9 +124,9 @@ html {
 .logo {
     position: absolute;
     left: 0em;
-    top: 50%;
+    top: 100%;
     transform: translateY(-50%);
-    width: 100px;
+    width: 180px;
     height: auto;
 }
 
@@ -337,7 +337,7 @@ h1 {
     font: bold 2em 'Segoe UI', sans-serif;
     text-align: center;
     margin-top: 1em;
-  }
+}
 
 /* Page wrapper */
 main.entirepage {
@@ -347,5 +347,4 @@ main.entirepage {
     background-color: #f0f0f0;
     border: ridge 10px black;
     box-sizing: border-box;
-    }
-
+}
