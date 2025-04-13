@@ -376,4 +376,10 @@ aside {
     top: 20px;
     align-self: flex-start;
   }
-  
+
+/* Responsive layout for mobile */
+@media screen and (max-width: 768px) {
+    .job-layout {
+      flex-direction: column;
+    }
+
