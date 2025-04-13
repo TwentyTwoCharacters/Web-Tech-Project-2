@@ -87,6 +87,7 @@ footer {
     padding: 1.5em 0;
     background: #f8f4e9 /* goodbye cool gradient linear-gradient(0.25turn, #1f8fff, #00bfff, #85cdfa, #00bfff, #1f8fff)*/;
     margin-top: 2em;
+    margin-right: #f8f4e9 10px;
     border-top: 8px solid black;
 }
 
@@ -102,9 +103,7 @@ footer {
 }
 
 /*Background colour */
-html {
-    background-color: black;
-}
+
 
 .cssbody {
     border: solid 10px black;
