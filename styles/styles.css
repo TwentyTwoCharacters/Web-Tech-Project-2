@@ -85,7 +85,7 @@ header {
 footer {
     text-align: center;
     padding: 1.5em 0;
-    background: linear-gradient(0.25turn, #1f8fff, #00bfff, #85cdfa, #00bfff, #1f8fff);
+    background: #f8f4e9 /*linear-gradient(0.25turn, #1f8fff, #00bfff, #85cdfa, #00bfff, #1f8fff) goodbye cool gradient*/;
     margin-top: 2em;
     border-top: 8px solid black;
 }
