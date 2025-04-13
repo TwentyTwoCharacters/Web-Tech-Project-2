@@ -342,10 +342,5 @@ main.entirepage {
     align-items: flex-start;
   }
 
-/* Job content takes ~70% */
-.job-content {
-    flex: 1 1 70%;
-  }
-
  
   
