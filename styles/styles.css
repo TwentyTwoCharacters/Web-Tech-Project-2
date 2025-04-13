@@ -357,5 +357,9 @@ main.entirepage {
     align-items: flex-start;
   }
 
+/* Job content */
+.job-content {
+    flex: 1 1 70%;
+  }
  
   
