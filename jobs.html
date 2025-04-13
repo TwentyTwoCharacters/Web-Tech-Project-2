@@ -30,73 +30,126 @@ subsections, lists etc. using the appropriate HTML elements-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Job Descriptions - Optional Programmers</title>
-
   <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body class="cssbody">
 
-<!-- Header with site navigation -->
-<header>
-  <div class="center-container">
-    <h1 class="typewriter">Optional Programmers</h1>
-  </div>
-
-  <nav>
-    <a href="index.html">
-      <img src="images/home.png "width="18" height="18">
-      Index
+  <!-- Header with site navigation -->
+  <header>
+    <div class="center-container">
+      <h1 class="typewriter">Optional Programmers</h1>
+    </div>
+    <nav>
+      <a href="index.html">
+        <img src="images/home.png" width="18" height="18" alt="Home Icon"> Index
       </a>
       <a href="about.html">
-        <img src="images/user.png "width="18" height="18">
-        About us
-        </a>
-  <a href="apply.html">
-      <img src="images/edit.png "width="18" height="18">
-      Apply
-  </a>
-  </nav>
-  <hr class="hr">
-</header>
-<section class="entirepage">
-<!-- Main job listings content -->
-<main>
-  <h2>Available Positions</h2>
+        <img src="images/user.png" width="18" height="18" alt="User Icon"> About us
+      </a>
+      <a href="apply.html">
+        <img src="images/edit.png" width="18" height="18" alt="Apply Icon"> Apply
+      </a>
+    </nav>
+    <hr class="hr">
+  </header>
 
-  <!-- Job 1 -->
-  <div>
-    <article>
-      <h3>Position: IT Support Technician</h3>
-      <p>
-        <strong>Reference ID:</strong> G05A1<br>
+  <!-- Main content for job listings -->
+  <main class="entirepage">
+    <h2>Available Positions</h2>
+
+    <!-- Job 1 Section -->
+    <section>
+      <h3>IT Support Technician</h3>
+      <article>
+        <p><strong>Reference ID:</strong> G05A1<br>
         <strong>Salary Range:</strong> $60,000 – $75,000 AUD<br>
-        <strong>Reports To:</strong> IT Services Manager
-      </p>
-    </article>
-  </div>
-  
-  <!-- Job 2 -->
-  <div>
-    <article>
-      <h3>Position: Software Developer</h3>
-      <p>
-        <strong>Reference ID:</strong> GD302<br>
+        <strong>Reports To:</strong> IT Services Manager</p>
+
+        <p>The IT Support Technician will provide technical support to staff by troubleshooting hardware and software problems, installing new systems, and maintaining existing infrastructure. The ideal candidate is a problem-solver with strong communication skills and attention to detail.</p>
+
+        <h4>Key Responsibilities</h4>
+        <ul>
+          <li>Provide Level 1 IT support for staff across the company</li>
+          <li>Assist with installation and maintenance of equipment</li>
+          <li>Document IT incidents and resolutions</li>
+          <li>Collaborate with the IT team for system upgrades</li>
+        </ul>
+
+        <h4>Qualifications & Skills</h4>
+        <ol>
+          <li><strong>Essential:</strong>
+            <ul>
+              <li>Certificate IV or higher in IT</li>
+              <li>1+ years of experience in help desk roles</li>
+              <li>Familiar with Windows, Mac, and networking basics</li>
+            </ul>
+          </li>
+          <li><strong>Preferable:</strong>
+            <ul>
+              <li>Experience using support ticket systems</li>
+              <li>Basic knowledge of cybersecurity protocols</li>
+            </ul>
+          </li>
+        </ol>
+      </article>
+    </section>
+
+    <!-- Job 2 Section -->
+    <section>
+      <h3>Software Developer</h3>
+      <article>
+        <p><strong>Reference ID:</strong> GD302<br>
         <strong>Salary Range:</strong> $80,000 – $110,000 AUD<br>
-        <strong>Reports To:</strong> Lead Software Engineer
-      </p>
-    </article>
-  </div>
-</main>
-</section>
-<!-- Footer -->
-<footer class="indexfooter">
-  <p>
-    If you have any further questions<br>
-    please contact us at <a href="mailto:info@OptionalProgrammers.com.au">info@OptionalProgrammers.com.au</a>
-  </p>
-  <p>
-    <a href="https://lucasjurgec.atlassian.net/jira/software/projects/WTP1/boards/68">Jira</a>
-  </p>
-</footer>
+        <strong>Reports To:</strong> Lead Software Engineer</p>
+
+        <p>We're seeking a talented Software Developer to build high-quality applications using modern technologies. The role involves front-end and back-end development, testing, and collaborating with cross-functional teams to deliver functional software solutions.</p>
+
+        <h4>Key Responsibilities</h4>
+        <ul>
+          <li>Design and implement scalable software solutions</li>
+          <li>Write clean, testable code in JavaScript and Python</li>
+          <li>Collaborate with designers and product managers</li>
+          <li>Maintain and improve existing codebases</li>
+        </ul>
+
+        <h4>Qualifications & Skills</h4>
+        <ol>
+          <li><strong>Essential:</strong>
+            <ul>
+              <li>Bachelor’s in Computer Science or related field</li>
+              <li>3+ years experience in web/app development</li>
+              <li>Proficiency with HTML, CSS, JS, and Python</li>
+            </ul>
+          </li>
+          <li><strong>Preferable:</strong>
+            <ul>
+              <li>Experience with React, Node.js, or Flask</li>
+              <li>Knowledge of version control (Git)</li>
+            </ul>
+          </li>
+        </ol>
+      </article>
+    </section>
+
+    <!-- Aside Section -->
+    <aside>
+      <h4>Why Work With Us?</h4>
+      <p>At Optional Programmers, we offer flexible hours, remote work opportunities, and a supportive team environment that values growth, learning, and collaboration.</p>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="indexfooter">
+    <p>
+      If you have any further questions,<br>
+      please contact us at 
+      <a href="mailto:info@OptionalProgrammers.com.au">info@OptionalProgrammers.com.au</a>
+    </p>
+    <p>
+      <a href="https://lucasjurgec.atlassian.net/jira/software/projects/WTP1/boards/68" target="_blank">View Our Jira Board</a>
+    </p>
+  </footer>
 
 </body>
 </html>
