@@ -90,7 +90,7 @@ header {
 footer {
     text-align: center;
     padding: 1.5em 0;
-    background: #f8f4e9 /* goodbye cool gradient linear-gradient(0.25turn, #1f8fff, #00bfff, #85cdfa, #00bfff, #1f8fff)*/;
+    background: #f8f4e9 /* goodbye cool gradient | linear-gradient(0.25turn, #1f8fff, #00bfff, #85cdfa, #00bfff, #1f8fff)*/;
     margin-top: 2em;
     border-top: 8px solid black;
 }
@@ -120,8 +120,8 @@ html, body {
     /* rainbow background hurt my eyes ;-; | linear-gradient(0.5turn, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF	)*/
     ;
     color: black;
-    overflow-x: hidden;
-    overflow-y:scroll;
+    overflow-x: hidden;/* thanks W3Schools (i had no idea how to disable horizontal overflow scorlling - luke)
+    https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp*/ 
 }
 
 .header-flex {
