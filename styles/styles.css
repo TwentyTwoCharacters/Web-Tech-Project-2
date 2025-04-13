@@ -67,7 +67,11 @@ description: styling html webpage
 
 header {
     position: sticky;
-    background: #f8f4e9
+    background: #f8f4e9;
+    width: 100vw;
+    align-self: center;
+    margin-top: 5px #f8f4e9 solid;
+
 }
 
 .textcenter {
@@ -78,7 +82,8 @@ header {
     height: 8px;
     border: none;
     background: black;
-    width: 100%;
+    width: 100vw;
+    align-self: left;
     margin-top: 1em;
 }
 
@@ -102,16 +107,20 @@ footer {
 }
 
 /*Background colour */
-html {
-    background-color: black;
+
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
+
 .cssbody {
-    border: solid 10px black;
+   
     background: rgb(186, 212, 220);
     /* rainbow background hurt my eyes ;-; | linear-gradient(0.5turn, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF	)*/
     ;
     color: black;
+    overflow-x: hidden;
 }
 
 .header-flex {
@@ -391,12 +400,3 @@ aside {
 }
 
 /* Footer styles */
-footer.indexfooter {
-    width: 100%;
-    text-align: center;
-    font-size: 0.85em;
-    padding: 1.5em 0;
-    background: linear-gradient(0.25turn, #1f8fff, #00bfff, #85cdfa, #00bfff, #1f8fff);
-    border-top: 8px solid black;
-    margin-top: 40px;
-}
