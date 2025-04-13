@@ -60,6 +60,8 @@ description: styling html webpage
 
 /* General CSS code */
 
+*{font-family:  'Times New Roman', Arial, sans-serif; ;}
+
 header{position: sticky;
     background: linear-gradient(0.25turn, #1f8fff, #00bfff, #85cdfa, #00bfff, #1f8fff);
       }
