@@ -376,3 +376,27 @@ aside {
     top: 20px;
     align-self: flex-start;
 }
+
+/* Responsive layout for mobile */
+@media screen and (max-width: 768px) {
+    .job-layout {
+        flex-direction: column;
+    }
+
+    .job-content,
+    aside {
+        flex: 1 1 100%;
+        position: static;
+    }
+}
+
+/* Footer styles */
+footer.indexfooter {
+    width: 100%;
+    text-align: center;
+    font-size: 0.85em;
+    padding: 1.5em 0;
+    background: linear-gradient(0.25turn, #1f8fff, #00bfff, #85cdfa, #00bfff, #1f8fff);
+    border-top: 8px solid black;
+    margin-top: 40px;
+}
