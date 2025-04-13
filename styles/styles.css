@@ -207,7 +207,7 @@ nav a:hover {
 
 .table-file1 th {
     font-weight: bold;
-    background-color: #4CAF50;
+    background: rgb(75, 175, 206);
     /* Green background for headings */
     color: white;
     padding: 10px;
@@ -228,6 +228,28 @@ nav a:hover {
     /* Darker grey when hovered */
 }
 
+.right-align {
+    width: fit-content;
+    /* Shrinks to fit content width */
+    margin-left: auto;
+    /* Pushes element to the right */
+    margin-right: 0;
+    /* No extra space on right */
+    padding-right: 20px;
+}
+
+.float-right {
+    float: right;
+    margin: 10px;
+    /* optional spacing around the figure */
+    text-align: center;
+    /* centers the caption under the image */
+}
+
+.float-right img {
+    border: 2px solid #000;
+    /* shorthand: width, style, color */
+}
 
 
 
