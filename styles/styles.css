@@ -317,7 +317,10 @@ input[type="checkbox"] {
 
 /* Jobs Page */
 
+/* h1 styling */
 h1 {
-    font: bold 2em 'Segoe UI', sans-serif; /* Style <h1> using shorthand font property */
-}
+    font: bold 2em 'Segoe UI', sans-serif;
+    text-align: center;
+    margin-top: 1em;
+  }
 
