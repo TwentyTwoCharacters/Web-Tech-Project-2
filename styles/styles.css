@@ -145,7 +145,7 @@ nav a {
 
     padding: 1em 1em;
     border: 1px solid black;
-    background: darkgray;
+    background: rgb(255, 255, 255);
     border-radius: 5px;
     margin: 3px;
     display: inline-flex;
@@ -344,7 +344,7 @@ main.entirepage {
     max-width: 1200px;
     margin: 30px auto;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     border: ridge 10px black;
     box-sizing: border-box;
 }
