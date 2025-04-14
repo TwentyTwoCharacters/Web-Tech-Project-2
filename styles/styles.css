@@ -67,7 +67,11 @@ description: styling html webpage
 
 header {
     position: sticky;
-    background: rgb(242, 243, 234)
+    background: #f8f4e9;
+    width: 100vw;
+    align-self: center;
+    margin-top: 5px #f8f4e9 solid;
+
 }
 
 .textcenter {
@@ -78,14 +82,17 @@ header {
     height: 8px;
     border: none;
     background: black;
-    width: 100%;
+    width: 100vw;
+    align-self: left;
     margin-top: 1em;
 }
 
 footer {
     text-align: center;
     padding: 1.5em 0;
-    background: linear-gradient(0.25turn, #1f8fff, #00bfff, #85cdfa, #00bfff, #1f8fff);
+    background: #f8f4e9
+        /* goodbye cool gradient | linear-gradient(0.25turn, #1f8fff, #00bfff, #85cdfa, #00bfff, #1f8fff)*/
+    ;
     margin-top: 2em;
     border-top: 8px solid black;
 }
@@ -102,16 +109,23 @@ footer {
 }
 
 /*Background colour */
-html {
-    background-color: black;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
 }
 
+
 .cssbody {
-    border: solid 10px black;
+
     background: rgb(186, 212, 220);
-    /*linear-gradient(0.5turn, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF	)*/
+    /* rainbow background hurt my eyes ;-; | linear-gradient(0.5turn, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF	)*/
     ;
     color: black;
+    overflow-x: hidden;
+    /* thanks W3Schools (i had no idea how to disable horizontal overflow scorlling - luke)
+    https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp*/
 }
 
 .header-flex {
@@ -145,7 +159,7 @@ nav a {
 
     padding: 1em 1em;
     border: 1px solid black;
-    background: darkgray;
+    background: rgb(255, 255, 255);
     border-radius: 5px;
     margin: 3px;
     display: inline-flex;
@@ -344,7 +358,7 @@ main.entirepage {
     max-width: 1200px;
     margin: 30px auto;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     border: ridge 10px black;
     box-sizing: border-box;
 }
@@ -376,3 +390,18 @@ aside {
     top: 20px;
     align-self: flex-start;
 }
+
+/* Responsive layout for mobile */
+@media screen and (max-width: 768px) {
+    .job-layout {
+        flex-direction: column;
+    }
+
+    .job-content,
+    aside {
+        flex: 1 1 100%;
+        position: static;
+    }
+}
+
+/* Footer styles */
