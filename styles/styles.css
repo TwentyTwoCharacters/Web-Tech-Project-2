@@ -225,19 +225,17 @@ nav a:hover {
 /* About Page */
 
 
-/* Style the table in file1.html */
 .table-file1 {
     border-collapse: collapse;
-    /* Ensures no gaps between table cells */
     width: 80%;
-    /* Adjust the width of the table */
     margin: 20px 0;
 }
 
 .table-file1 th {
     font-weight: bold;
     background: rgb(75, 175, 206);
-    /* Green background for headings */
+    /* Green background for headings |
+    -- Update ur comments abhi  */
     color: white;
     padding: 10px;
     text-align: center;
@@ -245,25 +243,25 @@ nav a:hover {
 
 .table-file1 td {
     background-color: #f2f2f2;
-    /* Light grey background for table cells */
+    /* light grey background for table cells */
     padding: 10px;
     text-align: center;
     transition: background-color 0.3s ease;
-    /* Smooth transition for hover effect */
+    /* smooth transition for hover effect */
 }
 
 .table-file1 td:hover {
     background-color: #ddd;
-    /* Darker grey when hovered */
+    /* darker grey when hovered */
 }
 
 .right-align {
     width: fit-content;
-    /* Shrinks to fit content width */
+    /* shrinks to fit content width */
     margin-left: auto;
-    /* Pushes element to the right */
+    /* pushes element to the right */
     margin-right: 0;
-    /* No extra space on right */
+    /* no extra space on right */
     padding-right: 20px;
 }
 
@@ -287,7 +285,7 @@ nav a:hover {
 
 
 .appLegend {
-    font-weight: bold;
+    font-weight: bold; /* does what it says - why did i comment this ;-;*/
 }
 
 .jobform {
@@ -295,6 +293,7 @@ nav a:hover {
     margin: auto;
     padding: 20px;
     box-sizing: border-box;
+    
 }
 
 .pagetop {
