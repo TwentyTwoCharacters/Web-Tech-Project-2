@@ -105,7 +105,7 @@ footer {
     padding: 10px;
     box-sizing: border-box;
     border-radius: 10px;
-    background-color: lightgray;
+    background-color: rgb(255, 255, 255);
 }
 
 /*Background colour */
@@ -403,5 +403,3 @@ aside {
         position: static;
     }
 }
-
-/* Footer styles */
