@@ -175,7 +175,7 @@ nav a:hover {
 
 /* Index Page */
 
-.listalign {
+#listalign {
     display: inline-block;
     /* makes it respect text-align center */
 }
