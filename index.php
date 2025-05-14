@@ -20,24 +20,10 @@ In the footer include the link to your Jira Project (Don't forget to give access
 
 </head>
 
-<body class="cssbody">
-    <!-- Page header containing logo and navigation -->
-    <header>
-        <div class="header-flex">
-            <img src="images/logoupdate.png" alt="Logo" class="logo">
-            <div class="center-container">
-                <h1 class="typewriter">Optional Programmers</h1>
-            </div>
-        </div>
+<?php   include 'header.inc';
+        include 'nav.inc'; 
+        require_once("settings.php");?>
 
-        <!-- Navigation menu -->
-        <nav>
-            <a href="jobs.html"><img src="images/briefcase.png" width="18" height="18" alt="Job Icon"> Job Description</a>
-            <a href="about.html"><img src="images/user.png" width="18" height="18" alt="User Icon"> About us</a>
-            <a href="apply.html"><img src="images/edit.png" width="18" height="18" alt="Apply Icon"> Apply</a>
-        </nav>
-        <hr class="hr">
-    </header>
     <section class="entirepage">
     <!-- Main content area -->
     <main>
@@ -76,16 +62,8 @@ In the footer include the link to your Jira Project (Don't forget to give access
         </section>
     </main>
     </section>
-    <!-- Footer with contact info and links -->
-    <footer>
-        <p>
-            If you have any further questions<br>
-            please contact us at <a href="info@OptionalProgrammers.com.au">info@OptionalProgrammers.com.au</a>
-        </p>
-        <P>
-            <a href="https://lucasjurgec.atlassian.net/jira/software/projects/WTP1/boards/68">Jira</a> <a href="https://github.com/TwentyTwoCharacters/Web-Tech-Project-1">Github</a>
-        </P>
-    </footer>
-</body>
+   
+      <!-- footer content found in footer.inc-->
+    <?php include 'footer.inc'; ?>
 
 </html>

@@ -44,21 +44,9 @@ tested.
     <title>Job Application</title>
 </head>
 
-<body class="cssbody">
-    <header> <!--CREDIT TO LUCAS FOR MAKING THE THEME-->
-        <div class="header-flex">
-            <img src="images/logoupdate.png" alt="Logo" class="logo">
-            <div class="center-container">
-                <h1 class="typewriter">Optional Programmers</h1>
-            </div>
-        </div>
-        <nav> <!-- Nav men -->
-            <a href="jobs.html"><img src="images/briefcase.png" width="18" height="18" alt="Job Icon"> Job Description</a>
-            <a href="about.html"><img src="images/user.png" width="18" height="18" alt="User Icon"> About us</a>
-            <a href="index.html"><img src="images/home.png" width="18" height="18" alt="Home Icon"> Index</a>
-        </nav>
-        <hr class="hr"> <!--header seperator css-->
-    </header>
+<?php   include 'header.inc';
+        include 'nav.inc'; 
+        require_once("settings.php");?>
 
     <section class="entirepage">
         <section class="pagetop">
@@ -191,13 +179,7 @@ tested.
             </form>
         </section>
     </section>
-
-    <footer> <!--CREDIT TO LUCAS -->
-        <p>
-            If you have any further questions please contact us at <a href="mailto:info@OptionalProgrammers.com.au">info@OptionalProgrammers.com.au</a>
-        </p>
-        <p><a href="https://lucasjurgec.atlassian.net/jira/software/projects/WTP1/boards/68">Jira</a> <a href="https://github.com/TwentyTwoCharacters/Web-Tech-Project-1">Github</a></p>
-    </footer>
-</body>
+ <!-- footer content found in footer.inc-->
+<?php include 'footer.inc'; ?>
 
 </html>

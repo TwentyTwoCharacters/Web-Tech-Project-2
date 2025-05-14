@@ -31,8 +31,9 @@ the techniques you apply in your assignment, and could include:
     <title>About Page</title>
 </head>
 
-<?php include 'header.inc'; 
-require_once("settings.php");?>
+<?php   include 'header.inc';
+        include 'nav.inc'; 
+        require_once("settings.php");?>
 
     <section class="entirepage">
         <h1 class="blue-heading">About Us</h1>
@@ -137,7 +138,7 @@ require_once("settings.php");?>
         </dl>
 
     </section>
-
+ <!-- footer content found in footer.inc-->
 <?php include 'footer.inc'; ?>
 
 </html>

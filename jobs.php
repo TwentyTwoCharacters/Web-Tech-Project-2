@@ -32,22 +32,10 @@ subsections, lists etc. using the appropriate HTML elements-->
   <title>Job Descriptions - Optional Programmers</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body class="cssbody">
 
-  <header>
-    <div class="header-flex">
-      <img src="images/logoupdate.png" alt="Logo" class="logo">
-      <div class="center-container">
-          <h1 class="typewriter">Optional Programmers</h1>
-      </div>
-    </div>
-    <nav>
-      <a href="index.html"><img src="images/home.png" width="18" height="18" alt="Home Icon"> Index</a>
-      <a href="about.html"><img src="images/user.png" width="18" height="18" alt="User Icon"> About us</a>
-      <a href="apply.html"><img src="images/edit.png" width="18" height="18" alt="Apply Icon"> Apply</a>
-    </nav>
-    <hr class="hr">
-  </header>
+ <?php   include 'header.inc';
+        include 'nav.inc'; 
+        require_once("settings.php");?>
 
   <main class="entirepage">
     <h2>Available Positions</h2>
@@ -140,11 +128,7 @@ subsections, lists etc. using the appropriate HTML elements-->
     </div>
   </main>
 
-  <footer>
-    <p>If you have any further questions,<br>
-      please contact us at <a href="mailto:info@OptionalProgrammers.com.au">info@OptionalProgrammers.com.au</a></p>
-    <p><a href="https://lucasjurgec.atlassian.net/jira/software/projects/WTP1/boards/68" target="_blank">View Our Jira Board</a></p>
-  </footer>
+  <!-- footer content found in footer.inc-->
+ <?php include 'footer.inc'; ?>
 
-</body>
-</html>
+ </html>
