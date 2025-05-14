@@ -16,6 +16,8 @@ the techniques you apply in your assignment, and could include:
 
 <!--Abhinav's page-->
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,23 +31,8 @@ the techniques you apply in your assignment, and could include:
     <title>About Page</title>
 </head>
 
-<body class="cssbody"><!--credit to lucas for the header-->
-    <header>
-        <div class="header-flex">
-            <img src="images/logoupdate.png" alt="Logo" class="logo">
-            <div class="center-container">
-                <h1 class="typewriter">Optional Programmers</h1>
-            </div>
-        </div>
-
-
-        <nav>
-            <a href="jobs.html"><img src="images/briefcase.png" width="18" height="18" alt="Job Icon"> Job Description</a>
-            <a href="index.html"><img src="images/home.png" width="18" height="18" alt="Home Icon"> Index</a>
-            <a href="apply.html"><img src="images/edit.png" width="18" height="18" alt="Apply Icon"> Apply</a>
-        </nav>
-        <hr class="hr">
-    </header>
+<?php include 'header.inc'; 
+require_once("settings.php");?>
 
     <section class="entirepage">
         <h1 class="blue-heading">About Us</h1>
@@ -150,17 +137,7 @@ the techniques you apply in your assignment, and could include:
         </dl>
 
     </section>
-    <footer class="indexfooter">
-        <p>
-            If you have any further questions<br>
-            please contact us at <a href="info@OptionalProgrammers.com.au">info@OptionalProgrammers.com.au</a>
-        </p>
-        <P>
-            <a href="https://lucasjurgec.atlassian.net/jira/software/projects/WTP1/boards/68">Jira</a> <a
-                href="https://github.com/TwentyTwoCharacters/Web-Tech-Project-1">Github</a>
-        </P>
-    </footer>
 
-</body>
+<?php include 'footer.inc'; ?>
 
 </html>
