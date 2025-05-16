@@ -31,7 +31,9 @@ the techniques you apply in your assignment, and could include:
     <title>About Page</title>
 </head>
 
+
 <?php   include 'header.inc';
+
         require_once("settings.php");?>
 
     <section class="entirepage">
