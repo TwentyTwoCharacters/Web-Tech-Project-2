@@ -7,6 +7,7 @@
             </div>
         </div>
 
-
+<?php include 'nav.inc';?>
+ 
         <hr class="hr">
     </header>
