@@ -56,7 +56,7 @@ the techniques you apply in your assignment, and could include:
         <!--Create a Definition list-->
         <dl>
             <dt>Abhinav Thakur</dt>
-            <dd>Designed the about page. Contributed to CSS styling. Made sure that the code follows accesibilty rules
+            <dd>Designed the about page Contributed to CSS styling. Made sure that the code follows accesibilty rules
 
             </dd>
             <dt>Luke Kelly</dt>
