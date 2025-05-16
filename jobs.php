@@ -34,7 +34,6 @@ subsections, lists etc. using the appropriate HTML elements-->
 </head>
 
  <?php   include 'header.inc';
-        include 'nav.inc'; 
         require_once("settings.php");?>
 
   <main class="entirepage">

@@ -32,7 +32,6 @@ the techniques you apply in your assignment, and could include:
 </head>
 
 <?php   include 'header.inc';
-        include 'nav.inc'; 
         require_once("settings.php");?>
 
     <section class="entirepage">

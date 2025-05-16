@@ -45,7 +45,6 @@ tested.
 </head>
 
 <?php   include 'header.inc';
-        include 'nav.inc'; 
         require_once("settings.php");?>
 
     <section class="entirepage">

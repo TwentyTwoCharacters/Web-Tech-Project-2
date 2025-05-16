@@ -21,7 +21,6 @@ In the footer include the link to your Jira Project (Don't forget to give access
 </head>
 
 <?php   include 'header.inc';
-        include 'nav.inc'; 
         require_once("settings.php");?>
 
     <section class="entirepage">
