@@ -45,7 +45,7 @@ the techniques you apply in your assignment, and could include:
         </ul>
         <!--Group photo using html figure element-->
         <figure class="float-right">
-            <img src="images/group-photo.jpeg" alt="Group Photo" width="500">
+            <img src="images/group-photo.jpg" alt="Group Photo" width="500">
             <figcaption>This is our group photo (Luke, Abhinav, Ali and Lucas from left to right)</figcaption>
         </figure>
         <ul class="right-align">
