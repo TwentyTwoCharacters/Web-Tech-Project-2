@@ -57,19 +57,29 @@ the techniques you apply in your assignment, and could include:
         <h2 class="h2-color">Members Contribution</h2>
         <!--Create a Definition list-->
         <dl>
-            <dt>Abhinav Thakur</dt>
+            <dt><b>Abhinav Thakur</b></dt>
             <dd>Designed the about page Contributed to CSS styling. Made sure that the code follows accesibilty rules
+            <br>
+            Project Part 2 Contribution
 
+            Abhi seems to have gone MIA during the part 2 phase??
             </dd>
-            <dt>Luke Kelly</dt>
+            <dt><b>Luke Kelly</b></dt>
             <dd>Designed the the apply page. Majorly contributed in CSS formatting. Set up the Github repository</dd>
-            <dt>Lucas Jurgec</dt>
-            <dd>Created the Optional programmers animation header.Designed the
-                home page and set up the Jira project.
+            <br>
+            Project Part 2 Contribution
+            
+              <dt><b>Lucas Jurgec</b></dt>
+            <dd>Created the Optional programmers animation header.Designed the home page and set up the Jira project.
+              <br>
+            Project Part 2 Contribution
             </dd>
-            <dt>Ali Afzali</dt>
-            <dd>Designed the jobs application page. Helped with CSS styling and tested the code for errors</dd>
-        </dl>
+            <dt><b>Ali Afzali</b></dt>
+             <dd>Designed the jobs application page. Helped with CSS styling and tested the code for errors</dd>
+            <br>
+            Project Part 2 Contribution
+       
+            </dl>
 
 
 
@@ -90,44 +100,23 @@ the techniques you apply in your assignment, and could include:
                     <td><b>Abhinav</b></td>
                     <td colspan="2">Loves playing sports especially cricket and football. Avoids
                         playing videogames as he gets addicted to them.
-                        <br>
-
-                    <p><b>Part 2 Contributions</b>
-
-                    Abhi seems to have gone MIA during the projects part 2 phase????</p>
-
                     </td>
                 </tr>
+          
                 <tr>
                     <td><b>Luke</b></td>
                     <td colspan="2">Loves playing video games like the Halo series and the Kingdom Come Deliverance
                         Series. </td>
-
-                          <br>
-
-                    <p><b>Part 2 Contributions</b></p>
-
-
                 </tr>
                 <tr>
                     <td><b>Lucas</b></td>
                     <td colspan="2">Loves playing soccer and watching the Premier league. He also likes reading sci fi
                         novels like the Hunger Games </td>
-
-                          <br>
-
-                    <p><b>Part 2 Contributions</b></p>
                 </tr>
                 <tr>
                     <td><b>Ali</b></td>
                     <td colspan="2">He likes to play basketball in his free time and going to the gym. His favourite
                         movie is interstellar. </td>
-
-                          <br>
-
-                    <p><b>Part 2 Contributions</b></p>
-
-
                 </tr>
             </tbody>
         </table>
