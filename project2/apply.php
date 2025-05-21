@@ -116,7 +116,8 @@ tested.
                     <!--postcode OMG IF I COULD USE JAVASCRIPT FOR THIS I WOULD OF LOVED TO CODE THE POSTCODE 
                     AND STATE TO THE AUSPOST DATABASE SO IT VALIDATES IF THE POSTCODE IS IN TYHE CORRECT STATE!!!-->
                     <label for="postcode">Postcode</label><br>
-                    <input type="text" id="postcode" name="postcode" pattern="\d{4}" required><br><br>
+                    <input type="text" id="postcode" name="postcode" pattern="0[2-9][0-9]{2}|[1-9][0-9]{3}" maxlength="4" required>
+
 
                     <!-- state selection (victoria on top ong) -->
                     <label for="state">State</label><br>
