@@ -5,4 +5,6 @@ if ($_SERVER["REQUEST_METHOD"] != "POST") {
     exit();
 }
 
+require_once("settings.php");
+
 ?>
