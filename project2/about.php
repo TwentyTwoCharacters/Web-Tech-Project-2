@@ -60,24 +60,27 @@ the techniques you apply in your assignment, and could include:
             <dt><b>Abhinav Thakur</b></dt>
             <dd>Designed the about page Contributed to CSS styling. Made sure that the code follows accesibilty rules
             <br>
-            Project Part 2 Contribution
+            Project Part 2 Contribution<br>
 
             Abhi seems to have gone MIA during the part 2 phase??
             </dd>
             <dt><b>Luke Kelly</b></dt>
             <dd>Designed the the apply page. Majorly contributed in CSS formatting. Set up the Github repository</dd>
             <br>
-            Project Part 2 Contribution
+            Project Part 2 Contribution<br>
             
-              <dt><b>Lucas Jurgec</b></dt>
+            </dd>
+            <dt><b>Lucas Jurgec</b></dt>
             <dd>Created the Optional programmers animation header.Designed the home page and set up the Jira project.
               <br>
-            Project Part 2 Contribution
+            Project Part 2 Contribution<br>
+
+
             </dd>
             <dt><b>Ali Afzali</b></dt>
              <dd>Designed the jobs application page. Helped with CSS styling and tested the code for errors</dd>
             <br>
-            Project Part 2 Contribution
+            Project Part 2 Contribution<br>
        
             </dl>
 
