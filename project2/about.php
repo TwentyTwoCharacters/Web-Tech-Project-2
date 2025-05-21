@@ -92,9 +92,9 @@ the techniques you apply in your assignment, and could include:
                         playing videogames as he gets addicted to them.
                         <br>
 
-                    <b>Part 2 Contributions</b>
+                    <p><b>Part 2 Contributions</b>
 
-                    Abhi seems to have gone MIA during the projects part 2 phase????
+                    Abhi seems to have gone MIA during the projects part 2 phase????</p>
 
                     </td>
                 </tr>
