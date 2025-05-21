@@ -21,14 +21,17 @@ require_once("../settings.php");
     <title>About Page</title>
 </head>
 
-<?php   include '../include_files/header.inc'; ?>
-
-    <h2>
-        Expression of Interest Tools
-    </h2>
+<?php include '../include_files/header.inc'; ?>
+ 
+<section class="entirepage">
+        <section class="pagetop">
+            <br>
+            <h1 class="applyh1">Expression of Interest Tools</h1>
+            <p>This is the EOI management portal for our company Optional Programmers.</p>
+            <p>Please refer to the tools below.</p>
+        </section>
 
      <form method="post" action="manage.php">
-    <h3>Search EOIs</h3>
 
     <!-- 1. List all EOIs -->
     <input type="submit" name="list_all" value="List All EOIs"><br><br>
