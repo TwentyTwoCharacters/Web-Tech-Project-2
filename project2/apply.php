@@ -171,6 +171,11 @@ tested.
                     <!-- text area for other skills (holy yap) -->
                     <label for="otherskills">Other Skills</label><br>
                     <textarea id="otherskills" name="otherskills" rows="4" cols="30" placeholder="Write any other skills you may have that will help your application..."></textarea>
+                    <br>
+                    <br>    
+                    <label for="resume">Upload Resume</label><br>
+                    <input type="file" id="resume" name="filename">
+
                 </fieldset>
 
                 <br>
