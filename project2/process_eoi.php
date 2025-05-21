@@ -42,4 +42,6 @@ $coding_html = in_array('HTML', $languages) ? 1 : 0;
 $coding_css = in_array('CSS', $languages) ? 1 : 0;
 $coding_java = in_array('JavaScript', $languages) ? 1 : 0;
 
+$errors = [];
+
 ?>
