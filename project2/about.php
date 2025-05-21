@@ -32,7 +32,7 @@ the techniques you apply in your assignment, and could include:
 </head>
 
 
-<?php   include '.include_files/header.inc';
+<?php   include './include_files/header.inc';
 
         require_once("settings.php");?>
 
@@ -140,6 +140,6 @@ the techniques you apply in your assignment, and could include:
 
     </section>
  <!-- footer content found in footer.inc-->
-<?php include 'footer.inc'; ?>
+<?php include './include_files/footer.inc'; ?>
 
 </html>

@@ -33,7 +33,7 @@ subsections, lists etc. using the appropriate HTML elements-->
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
- <?php   include 'header.inc';
+<?php   include './include_files/header.inc';
         require_once("settings.php");?>
 
   <main class="entirepage">
@@ -128,6 +128,6 @@ subsections, lists etc. using the appropriate HTML elements-->
   </main>
 
   <!-- footer content found in footer.inc-->
- <?php include 'footer.inc'; ?>
+<?php include './include_files/footer.inc'; ?>
 
  </html>

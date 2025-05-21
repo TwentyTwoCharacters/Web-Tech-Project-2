@@ -44,7 +44,7 @@ tested.
     <title>Job Application</title>
 </head>
 
-<?php   include 'header.inc';
+<?php   include './include_files/header.inc';
         require_once("settings.php");?>
 
     <section class="entirepage">
@@ -179,6 +179,6 @@ tested.
         </section>
     </section>
  <!-- footer content found in footer.inc-->
-<?php include 'footer.inc'; ?>
+<?php include './include_files/footer.inc'; ?>
 
 </html>
