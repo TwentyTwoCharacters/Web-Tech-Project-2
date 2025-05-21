@@ -13,7 +13,9 @@ require_once("../settings.php");
 <head>
     <title> Manager Portal</title>
 </head>
-<body>
+
+<?php   include './include_files/header.inc'; ?>
+
     <h2>
         Expression of Interest Tools
     </h2>
@@ -49,6 +51,6 @@ require_once("../settings.php");
   </form>
 
   <hr>
-</body>
+<?php include './include_files/footer.inc'; ?>
 
 </html>

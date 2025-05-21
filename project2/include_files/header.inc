@@ -1,4 +1,4 @@
-<body class="cssbody"><!--credit to lucas for the header-->
+<body class="cssbody">
     <header>
         <div class="header-flex">
             <a href="index.php">
@@ -9,7 +9,7 @@
             </div>
         </div>
 
-<?php include 'nav.inc';?>
+        <?php include 'nav.inc';?>
  
         <hr class="hr">
     </header>
