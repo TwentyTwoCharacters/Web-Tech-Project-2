@@ -87,26 +87,47 @@ the techniques you apply in your assignment, and could include:
             </thead>
             <tbody>
                 <tr>
-                    <td>Abhinav</td>
+                    <td><b>Abhinav</b></td>
                     <td colspan="2">Loves playing sports especially cricket and football. Avoids
                         playing videogames as he gets addicted to them.
+                        <br>
+
+                    <b>Part 2 Contributions</b>
+
+                    Abhi seems to have gone MIA during the projects part 2 phase????
+
                     </td>
                 </tr>
-                </tr>
                 <tr>
-                    <td>Luke</td>
+                    <td><b>Luke</b></td>
                     <td colspan="2">Loves playing video games like the Halo series and the Kingdom Come Deliverance
                         Series. </td>
+
+                          <br>
+
+                    <p><b>Part 2 Contributions</b></p>
+
+
                 </tr>
                 <tr>
-                    <td>Lucas</td>
+                    <td><b>Lucas</b></td>
                     <td colspan="2">Loves playing soccer and watching the Premier league. He also likes reading sci fi
                         novels like the Hunger Games </td>
+
+                          <br>
+
+                    <p><b>Part 2 Contributions</b></p>
                 </tr>
                 <tr>
-                    <td>Ali</td>
+                    <td><b>Ali</b></td>
                     <td colspan="2">He likes to play basketball in his free time and going to the gym. His favourite
                         movie is interstellar. </td>
+
+                          <br>
+
+                    <p><b>Part 2 Contributions</b></p>
+
+
                 </tr>
             </tbody>
         </table>
