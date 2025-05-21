@@ -1,7 +1,7 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] != "POST") {
-    header("Location: apply.php")
+    header("Location: apply.php");
     exit();
 }
 
