@@ -51,4 +51,27 @@ $coding_java = in_array('JavaScript', $languages) ? 1 : 0;
 // stores the errors
 $errors = [];
 
+// checking for errors
+
+// checks job id field
+if (empty($jobid)) {
+    $errors[] = "Job ID is required";
+}
+
+// checks first name field
+if (empty($firstname) || !preg_match("/^[a-zA-Z]{1,20}$/", $firstname)) {
+    $errors[] = "First name is required and must be max 20  characters long.";
+}
+// checks last name field
+if (empty($lastname) || !preg_match("/^[a-zA-Z]{1,20}$/", $lastname)) {
+    $errors[] = "Last name is required and must be max 20  characters long.";
+}
+
+// checks date of birth field
+if (empty($dob) || !preg_match("/^\d{2}-\d{2}-\d{4}$/", $dob)) {
+    $errors[] = "Date of Birth must be in DD-MM-YYYY format.";
+}
+
+
+
 ?>
