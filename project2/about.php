@@ -32,7 +32,7 @@ the techniques you apply in your assignment, and could include:
 </head>
 
 
-<?php   include 'header.inc';
+<?php   include '.include_files/header.inc';
 
         require_once("settings.php");?>
 
