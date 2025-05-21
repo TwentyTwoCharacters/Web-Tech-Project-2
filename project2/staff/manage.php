@@ -21,7 +21,7 @@ require_once("../settings.php");
     <title>About Page</title>
 </head>
 
-<?php include '../include_files/header.inc'; ?>
+<?php // include '../include_files/header.inc'; ?>
  
 <section class="entirepage">
         <section class="pagetop">
@@ -32,6 +32,7 @@ require_once("../settings.php");
         </section>
 
      <form method="post" action="manage.php">
+
 
     <!-- 1. List all EOIs -->
     <input type="submit" name="list_all" value="List All EOIs"><br><br>
@@ -61,6 +62,6 @@ require_once("../settings.php");
   </form>
 
   <hr>
-<?php include '../include_files/footer.inc'; ?>
+<?php // include '../include_files/footer.inc'; ?>
 
 </html>
