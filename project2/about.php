@@ -81,7 +81,8 @@ the techniques you apply in your assignment, and could include:
              <dd>Designed the jobs application page. Helped with CSS styling and tested the code for errors</dd>
             <br><br>
             Project Part 2 Contribution<br><br>
-       
+            
+            </dd>
             </dl>
 
 
