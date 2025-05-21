@@ -68,8 +68,13 @@ if (empty($lastname) || !preg_match("/^[a-zA-Z]{1,20}$/", $lastname)) {
 }
 
 // checks date of birth field
-if (empty($dob) || !preg_match("/^\d{2}-\d{2}-\d{4}$/", $dob)) {
-    $errors[] = "Date of Birth must be in DD-MM-YYYY format.";
+if (empty($dob) || !preg_match("/^\d{2}\/\d{2}\/\d{4}$/", $dob)) {
+    $errors[] = "Date of Birth must be in DD/MM/YYYY format.";
+}
+// also checking the date but will check if the date inputted is a real date
+list($day, $month, $year) = explode('/', $dob);
+if (!checkdate((int)$month, (int)$day, (int)$year)) {
+    $errors[] = "Date of Birth is not a valid date.";
 }
 
 
