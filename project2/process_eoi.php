@@ -33,4 +33,13 @@ $email = clean_input($_POST['email']);
 
 $otherskills = clean_input($_POST['otherskills']);
 
+$skills = isset($_POST['skills']) ? $_POST['skills'] : [];
+$languages = isset($_POST['languages']) ? $_POST['languages'] : [];
+
+$skills_networks = in_array('Networks', $skills) ? 1 : 0;
+$skills_computer = in_array('Computer Systems', $skills) ? 1 : 0;
+$coding_html = in_array('HTML', $languages) ? 1 : 0;
+$coding_css = in_array('CSS', $languages) ? 1 : 0;
+$coding_java = in_array('JavaScript', $languages) ? 1 : 0;
+
 ?>
