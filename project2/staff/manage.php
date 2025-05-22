@@ -34,10 +34,10 @@ require_once("../settings.php");
      <form method="post" action="manage.php">
 
 
-    <!-- 1. List all EOIs -->
+    <!-- 1. list all option-->
     <input type="submit" name="list_all" value="List All EOIs"><br><br>
 
-    <!-- 2. List EOIs by Job Ref -->
+    <!-- 2. search by job ref -->
     Job Reference: <input type="text" name="job_ref">
     <input type="submit" name="search_by_job" value="Search by Job"><br><br>
 
@@ -62,6 +62,100 @@ require_once("../settings.php");
   </form>
 
   <hr>
-<?php // include '../include_files/footer.inc'; ?>
+
+  <?php 
+  // 1. list all
+if (isset($_POST['list_all'])){
+    $query = "SELECT * FROM eoi";
+    displayEOIs($conn, $query);
+}
+
+// 2. Search by Job Reference
+if (isset($_POST['search_by_job'])) {
+    $job_ref = trim($_POST['job_ref']);
+    if ($job_ref != "") {
+        $query = "SELECT * FROM eoi WHERE job_reference_number = '$job_ref'";
+        displayEOIs($conn, $query);
+    } else {
+        echo "<p>Please enter a job reference.</p>";
+    }
+}
+
+// 3. Search by Applicant Name
+if (isset($_POST['search_by_name'])) {
+    $fname = trim($_POST['first_name']);
+    $lname = trim($_POST['last_name']);
+
+    $conditions = [];
+    if ($fname) $conditions[] = "first_name = '$fname'";
+    if ($lname) $conditions[] = "last_name = '$lname'";
+
+    if ($conditions) {
+        $where = implode(" AND ", $conditions);
+        $query = "SELECT * FROM eoi WHERE $where";
+        displayEOIs($conn, $query);
+    } else {
+        echo "<p>Please enter at least one name field.</p>";
+    }
+}
+
+// 4. Delete EOIs by Job Reference
+if (isset($_POST['delete_by_job'])) {
+    $delete_ref = trim($_POST['delete_job_ref']);
+    if ($delete_ref != "") {
+        $sql = "DELETE FROM eoi WHERE job_reference_number = '$delete_ref'";
+        if (mysqli_query($conn, $sql)) {
+            echo "<p>EOIs for job $delete_ref deleted.</p>";
+        } else {
+            echo "<p>Error deleting EOIs.</p>";
+        }
+    } else {
+        echo "<p>Please enter a job reference to delete.</p>";
+    }
+}
+
+// 5. Change EOI Status
+if (isset($_POST['change_status'])) {
+    $eoi_number = trim($_POST['eoi_number']);
+    $new_status = trim($_POST['new_status']);
+
+    if ($eoi_number != "" && $new_status != "") {
+        $sql = "UPDATE eoi SET status = '$new_status' WHERE eoinumber = $eoi_number";
+        if (mysqli_query($conn, $sql)) {
+            echo "<p>Status updated for EOI #$eoi_number.</p>";
+        } else {
+            echo "<p>Error updating status.</p>";
+        }
+    } else {
+        echo "<p>Please enter both EOI number and status.</p>";
+    }
+}
+
+// Display table
+function displayEOIs($conn, $query) {
+    $result = mysqli_query($conn, $query);
+    if ($result && mysqli_num_rows($result) > 0) {
+        echo "<table border='1'><tr>
+            <th>EOI Number</th><th>Job Ref</th><th>Name</th><th>Address</th>
+            <th>Email</th><th>Phone</th><th>Status</th>
+        </tr>";
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<tr>
+                <td>{$row['eoinumber']}</td>
+                <td>{$row['job_reference_number']}</td>
+                <td>{$row['first_name']} {$row['last_name']}</td>
+                <td>{$row['street_address']}, {$row['suburb']}, {$row['state']} {$row['postcode']}</td>
+                <td>{$row['email']}</td>
+                <td>{$row['phone']}</td>
+                <td>{$row['status']}</td>
+            </tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "<p>No results found.</p>";
+    }
+}
+mysqli_close($conn);
+?>
 
 </html>
