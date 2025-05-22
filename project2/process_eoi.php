@@ -31,7 +31,7 @@ $gender = isset($_POST['gender']) ? clean_input($_POST['gender']) : '';
 $street = clean_input($_POST['street']);
 $suburb = clean_input($_POST['suburb']);
 $postcode = clean_input($_POST['postcode']);
-$state = clean_input($_POST['state'])
+$state = clean_input($_POST['state']);
 
 $phone = clean_input($_POST['phone']);
 $email = clean_input($_POST['email']);
@@ -99,7 +99,7 @@ if (empty($postcode) || !preg_match("/^{4}$/", $postcode)) {
 }
 
 // checks state field
-if (empty($state)) || !in_array($state, ["VIC","NSW","QLD","NT","WA","SA","TAS","ACT"]) {
+if (empty($state) || !in_array($state, ["VIC","NSW","QLD","NT","WA","SA","TAS","ACT"])) {
     $errors[] = "Invalid state.";
 }
 
