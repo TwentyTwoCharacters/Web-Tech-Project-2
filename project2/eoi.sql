@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2025 at 02:48 PM
+-- Generation Time: May 22, 2025 at 06:00 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -46,7 +46,7 @@ CREATE TABLE `eoi` (
   `codinglang_css` tinyint(1) DEFAULT NULL,
   `codinglang_java` tinyint(1) DEFAULT NULL,
   `otherskills` text DEFAULT NULL,
-  `resume_file` varchar(255) DEFAULT NULL,
+  `resume_file` tinyint(1) DEFAULT NULL,
   `status` enum('New','Current','Final') DEFAULT 'New'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

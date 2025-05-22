@@ -121,4 +121,48 @@ if (!empty($errors)) {
     exit();
 }
 
+// will store if a resume was uploaded, tried to see if I could store a file but it wouldn't work well
+$resume_uploaded = 0;
+
+if (isset($_FILES["filename"]) && $_FILES["filename"]["error"] == 0) {
+    $resume_uploaded = 1;
+} 
+
+// inserting data
+$connp = $conn->prepare("
+    INSERT INTO eoi (
+    jobid, firstname, lastname, dob, gender,
+    street, suburb, postcode, state,
+    phone, email,
+    skills_networks, skills_computer,
+    codinglang_html, codinglang_css, codinglang_java,
+    otherskills,
+    resume_file
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+");
+
+// binds the ? to the data type
+$connp->bind_param("ssssssssssiiiiisi",
+    $jobid, $firstname, $lastname, $dob, $gender,
+    $street, $suburb, $postcode, $state,
+    $phone, $email,
+    $skills_networks, $skills_computer,
+    $codinglang_html, $codinglang_css, $codinglang_java,
+    $otherskills,
+    $resume_file
+);
+
+// displays a message on if the data was submitted or not
+if ($connp->execute()) {
+    $eoi_id = $connp->insert_id;
+    echo "<h2>Application Submitted Successfully</h2>";
+    echo "<p>Your EOI Number is <strong>$eoi_id</strong>.</p>";
+} else {
+    echo "<p>Error submitting application. Please try again.</p>";
+}
+
+// close access to the mysql
+$connp->close();
+$conn->close();
+
 ?>
