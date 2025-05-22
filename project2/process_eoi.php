@@ -94,7 +94,7 @@ if (empty($suburb) || !preg_match("/^.{1,40}$/", $suburb)) {
 }
 
 // checks postcode is exactly 4 digits long
-if (empty($postcode) || !preg_match("/^{4}$/", $postcode)) {
+if (empty($postcode) || !preg_match("/^\d{4}$/", $postcode)) {
     $errors[] = "Postcode is required and must be 4 digits long.";
 }
 
@@ -104,7 +104,7 @@ if (empty($state) || !in_array($state, ["VIC","NSW","QLD","NT","WA","SA","TAS","
 }
 
 // checks phone number field
-if (empty($phone) || !preg_match("/^{8,12}$/", $phone)) {
+if (empty($phone) || !preg_match("/^[\d\s]{8,12}$/", $phone)) {
     $errors[] = "Phone number is required and must be 8-12 digits long";
 }
 
