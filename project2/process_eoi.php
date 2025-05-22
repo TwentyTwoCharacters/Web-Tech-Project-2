@@ -70,7 +70,7 @@ if (empty($lastname) || !preg_match("/^[a-zA-Z]{1,20}$/", $lastname)) {
 
 // checks date of birth field
 if (empty($dob) || !preg_match("/^\d{2}\/\d{2}\/\d{4}$/", $dob)) {
-    $errors[] = "Date of Birth must be in DD/MM/YYYY format.";
+    $errors[] = "Date of Birth is required and must be in DD/MM/YYYY format.";
 } else { // also checking the date but will check if the date inputted is a real date
     list($day, $month, $year) = explode('/', $dob);
     if (!checkdate((int)$month, (int)$day, (int)$year)) {
@@ -84,17 +84,17 @@ if (empty($gender)) {
 }
 
 // checks street field
-if (empty($street) || !preg_match("/^{1,40}$/", $street)) {
+if (empty($street) || !preg_match("/^.{1,40}$/", $street)) {
     $errors[] = "Street name and number is required and must be max 40 characters long.";
 }
 
 // checks suburb field
-if (empty($suburb) || !preg_match("/^{1,40}$/", $suburb)) {
+if (empty($suburb) || !preg_match("/^.{1,40}$/", $suburb)) {
     $errors[] = "Suburb name is required and must be max 40 characters long.";
 }
 
 // checks postcode is exactly 4 digits long
-if (empty($postcode) || !preg_match("/^{4}$/", $postcode)) {
+if (empty($postcode) || !preg_match("/^\d{4}$/", $postcode)) {
     $errors[] = "Postcode is required and must be 4 digits long.";
 }
 
@@ -104,7 +104,7 @@ if (empty($state) || !in_array($state, ["VIC","NSW","QLD","NT","WA","SA","TAS","
 }
 
 // checks phone number field
-if (empty($phone) || !preg_match("/^{8,12}$/", $phone)) {
+if (empty($phone) || !preg_match("/^[\d\s]{8,12}$/", $phone)) {
     $errors[] = "Phone number is required and must be 8-12 digits long";
 }
 
@@ -142,14 +142,14 @@ $connp = $conn->prepare("
 ");
 
 // binds the ? to the data type
-$connp->bind_param("ssssssssssiiiiisi",
+$connp->bind_param("sssssssssssiiiisi",
     $jobid, $firstname, $lastname, $dob, $gender,
     $street, $suburb, $postcode, $state,
     $phone, $email,
     $skills_networks, $skills_computer,
     $codinglang_html, $codinglang_css, $codinglang_java,
     $otherskills,
-    $resume_file
+    $resume_uploaded
 );
 
 // displays a message on if the data was submitted or not
