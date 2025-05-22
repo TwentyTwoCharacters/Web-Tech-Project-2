@@ -128,4 +128,17 @@ if (isset($_FILES["filename"]) && $_FILES["filename"]["error"] == 0) {
     $resume_uploaded = 1;
 } 
 
+// inserting data
+$connp = $conn->prepare("
+    INSERT INTO eoi (
+    jobid, firstname, lastname, dob, gender,
+    street, suburb, postcode, state,
+    phone, email,
+    skills_networks, skills_computer,
+    codinglang_html, codinglang_css, codinglang_java,
+    otherskills,
+    resume_file
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+");
+
 ?>
