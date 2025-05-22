@@ -121,4 +121,11 @@ if (!empty($errors)) {
     exit();
 }
 
+// will store if a resume was uploaded, tried to see if I could store a file but it wouldn't work well
+$resume_uploaded = 0;
+
+if (isset($_FILES["filename"]) && $_FILES["filename"]["error"] == 0) {
+    $resume_uploaded = 1;
+} 
+
 ?>
