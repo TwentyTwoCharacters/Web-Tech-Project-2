@@ -60,11 +60,11 @@ if (empty($jobid)) {
 
 // checks first name field
 if (empty($firstname) || !preg_match("/^[a-zA-Z]{1,20}$/", $firstname)) {
-    $errors[] = "First name is required and must be max 20  characters long.";
+    $errors[] = "First name is required and must be max 20 characters long.";
 }
 // checks last name field
 if (empty($lastname) || !preg_match("/^[a-zA-Z]{1,20}$/", $lastname)) {
-    $errors[] = "Last name is required and must be max 20  characters long.";
+    $errors[] = "Last name is required and must be max 20 characters long.";
 }
 
 // checks date of birth field
@@ -82,6 +82,24 @@ if (empty($gender)) {
     $errors[] = "Gender is required.";
 }
 
+// checks street field
+if (empty($street) || !preg_match("/^{1,40}$/", $street)) {
+    $errors[] = "Street name and number is required and must be max 40 characters long.";
+}
 
+// checks suburb field
+if (empty($suburb) || !preg_match("/^{1,40}$/", $suburb)) {
+    $errors[] = "Suburb name is required and must be max 40 characters long.";
+}
+
+// checks postcode is exactly 4 digits long
+if (empty($postcode) || !preg_match("/^{4}$/", $postcode)) {
+    $errors[] = "Postcode is required and must be 4 digits long.";
+}
+
+// checks state field
+if (empty($state)) || !in_array($state, ["VIC","NSW","QLD","NT","WA","SA","TAS","ACT"]) {
+    $errors[] = "Invalid state.";
+}
 
 ?>
