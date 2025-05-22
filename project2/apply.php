@@ -45,8 +45,7 @@ tested.
 </head>
 
 <?php   include './include_files/header.inc';
-        require_once("settings.php");
-        require_once("settings_postcode.php");?>
+        require_once("settings.php");?>
 
     <section class="entirepage">
         <section class="pagetop">
