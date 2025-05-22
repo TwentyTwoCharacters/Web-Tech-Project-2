@@ -51,7 +51,7 @@ $coding_java = in_array('JavaScript', $languages) ? 1 : 0;
 // stores the errors
 $errors = [];
 
-// checking for errors
+// checking for errors in inputs
 
 // checks job id field
 if (empty($jobid)) {
@@ -75,6 +75,11 @@ if (empty($dob) || !preg_match("/^\d{2}\/\d{2}\/\d{4}$/", $dob)) {
     if (!checkdate((int)$month, (int)$day, (int)$year)) {
         $errors[] = "Date of Birth is not a valid date.";
     }
+}
+
+// checks if gender was inputted
+if (empty($gender)) {
+    $errors[] = "Gender is required.";
 }
 
 
