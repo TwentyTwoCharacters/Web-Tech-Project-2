@@ -31,7 +31,7 @@ $gender = isset($_POST['gender']) ? clean_input($_POST['gender']) : '';
 $street = clean_input($_POST['street']);
 $suburb = clean_input($_POST['suburb']);
 $postcode = clean_input($_POST['postcode']);
-$state = clean_input($_POST['state'])
+$state = clean_input($_POST['state']);
 
 $phone = clean_input($_POST['phone']);
 $email = clean_input($_POST['email']);
@@ -84,12 +84,12 @@ if (empty($gender)) {
 }
 
 // checks street field
-if (empty($street) || !preg_match("/^{1,40}$/", $street)) {
+if (empty($street) || !preg_match("/^.{1,40}$/", $street)) {
     $errors[] = "Street name and number is required and must be max 40 characters long.";
 }
 
 // checks suburb field
-if (empty($suburb) || !preg_match("/^{1,40}$/", $suburb)) {
+if (empty($suburb) || !preg_match("/^.{1,40}$/", $suburb)) {
     $errors[] = "Suburb name is required and must be max 40 characters long.";
 }
 
@@ -99,7 +99,7 @@ if (empty($postcode) || !preg_match("/^{4}$/", $postcode)) {
 }
 
 // checks state field
-if (empty($state)) || !in_array($state, ["VIC","NSW","QLD","NT","WA","SA","TAS","ACT"]) {
+if (empty($state) || !in_array($state, ["VIC","NSW","QLD","NT","WA","SA","TAS","ACT"])) {
     $errors[] = "Invalid state.";
 }
 
@@ -142,14 +142,14 @@ $connp = $conn->prepare("
 ");
 
 // binds the ? to the data type
-$connp->bind_param("ssssssssssiiiiisi",
+$connp->bind_param("sssssssssssiiiiisi",
     $jobid, $firstname, $lastname, $dob, $gender,
     $street, $suburb, $postcode, $state,
     $phone, $email,
     $skills_networks, $skills_computer,
     $codinglang_html, $codinglang_css, $codinglang_java,
     $otherskills,
-    $resume_file
+    $resume_uploaded
 );
 
 // displays a message on if the data was submitted or not
