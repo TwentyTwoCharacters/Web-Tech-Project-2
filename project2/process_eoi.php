@@ -141,6 +141,7 @@ $connp = $conn->prepare("
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 ");
 
+// binds the ? to the data type
 $connp->bind_param("ssssssssssiiiiisi",
     $jobid, $firstname, $lastname, $dob, $gender,
     $street, $suburb, $postcode, $state,
