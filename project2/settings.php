@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pwd = "";
-$sql_db = "eoi"; // Replace with your actual DB name
+$sql_db = "eoi"; 
 
 
 $conn = mysqli_connect($host,$user,$pwd,$sql_db);
