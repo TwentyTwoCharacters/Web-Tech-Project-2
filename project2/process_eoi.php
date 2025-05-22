@@ -142,7 +142,7 @@ $connp = $conn->prepare("
 ");
 
 // binds the ? to the data type
-$connp->bind_param("sssssssssssiiiisi",
+$connp->bind_param("sssssssssssiiiiisi",
     $jobid, $firstname, $lastname, $dob, $gender,
     $street, $suburb, $postcode, $state,
     $phone, $email,
