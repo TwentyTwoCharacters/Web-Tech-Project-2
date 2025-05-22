@@ -141,4 +141,23 @@ $connp = $conn->prepare("
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 ");
 
+$connp->bind_param("ssssssssssiiiiisi",
+    $jobid, $firstname, $lastname, $dob, $gender,
+    $street, $suburb, $postcode, $state,
+    $phone, $email,
+    $skills_networks, $skills_computer,
+    $codinglang_html, $codinglang_css, $codinglang_java,
+    $otherskills,
+    $resume_file
+);
+
+// displays a message on if the data was submitted or not
+if ($connp->execute()) {
+    $eoi_id = $connp->insert_id;
+    echo "<h2>Application Submitted Successfully</h2>";
+    echo "<p>Your EOI Number is <strong>$eoi_id</strong>.</p>";
+} else {
+    echo "<p>Error submitting application. Please try again.</p>";
+}
+
 ?>
