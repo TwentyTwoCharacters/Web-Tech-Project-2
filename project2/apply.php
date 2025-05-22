@@ -57,7 +57,7 @@ tested.
 
         <section class="jobform">
            <!--the swinburne form server thingo -->
-            <form action="process_eoi.php" method="post" novalidate="novalidate">
+            <form action="process_eoi.php" method="post" novalidate="novalidate" enctype="multipart/form-data">
                 <fieldset> 
                     <legend class="appLegend">Job Application</legend>
 
