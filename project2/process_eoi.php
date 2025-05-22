@@ -147,7 +147,7 @@ $connp->bind_param("sssssssssssiiiiisi",
     $street, $suburb, $postcode, $state,
     $phone, $email,
     $skills_networks, $skills_computer,
-    $codinglang_html, $codinglang_css, $codinglang_java,
+    $coding_html, $coding_css, $coding_java,
     $otherskills,
     $resume_uploaded
 );
