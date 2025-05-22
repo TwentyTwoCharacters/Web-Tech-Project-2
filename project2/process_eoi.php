@@ -160,4 +160,7 @@ if ($connp->execute()) {
     echo "<p>Error submitting application. Please try again.</p>";
 }
 
+$connp->close();
+$conn->close();
+
 ?>
