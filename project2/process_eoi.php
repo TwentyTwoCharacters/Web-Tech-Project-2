@@ -71,7 +71,17 @@ if (empty($lastname) || !preg_match("/^[a-zA-Z]{1,20}$/", $lastname)) {
 // checks date of birth field
 if (empty($dob) || !preg_match("/^\d{2}\/\d{2}\/\d{4}$/", $dob)) {
     $errors[] = "Date of Birth is required and must be in DD/MM/YYYY format.";
-} 
+} else {
+    // Also check if it's a real date
+    list($day, $month, $year) = explode('/', $dob);
+
+    if (!checkdate((int)$month, (int)$day, (int)$year)) {
+        $errors[] = "Date of Birth is not a valid date.";
+    } else {
+        // Convert DD/MM/YYYY to YYYY-MM-DD for MySQL
+        $dob = date('Y-m-d', strtotime("$day/$month/$year"));
+    }
+}
 
 // checks if gender was inputted
 if (empty($gender)) {
