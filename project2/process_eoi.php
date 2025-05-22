@@ -44,6 +44,7 @@ $languages = isset($_POST['languages']) ? $_POST['languages'] : [];
 
 $skills_networks = in_array('Networks', $skills) ? 1 : 0;
 $skills_computer = in_array('Computer Systems', $skills) ? 1 : 0;
+
 $coding_html = in_array('HTML', $languages) ? 1 : 0;
 $coding_css = in_array('CSS', $languages) ? 1 : 0;
 $coding_java = in_array('JavaScript', $languages) ? 1 : 0;
@@ -100,6 +101,24 @@ if (empty($postcode) || !preg_match("/^{4}$/", $postcode)) {
 // checks state field
 if (empty($state)) || !in_array($state, ["VIC","NSW","QLD","NT","WA","SA","TAS","ACT"]) {
     $errors[] = "Invalid state.";
+}
+
+// checks phone number field
+if (empty($phone) || !preg_match("/^{8,12}$/", $phone)) {
+    $errors[] = "Phone number is required and must be 8-12 digits long";
+}
+
+// checks email field
+if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errors[] = "Email is required and must be in a valid format, i.e user@example.com";
+}
+
+// display errors
+if (!empty($errors)) {
+    echo "<h2>Form Submission Error</h2><ul>";
+    foreach ($errors as $err) echo "<li>$err</li>";
+    echo "</ul><p><a href='apply.php'>Go Back</a></p>";
+    exit();
 }
 
 ?>
