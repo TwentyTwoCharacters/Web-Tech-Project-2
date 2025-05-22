@@ -84,7 +84,7 @@ tested.
 
                     <!-- dob -->
                     <label for="dob">Date of Birth</label><br>
-                    <input type="text" id="dob" name="dob" pattern="\d{2}/\d{2}/\d{4}" required><br><br>
+                    <input type="text" id="dob" name="dob" pattern="\d{2}/\d{2}/\d{4}" placeholder="DD/MM/YYYY" required><br><br>
 
                     <!-- we love radio buttons (irrelevant comment :D)-->
                     <fieldset>
