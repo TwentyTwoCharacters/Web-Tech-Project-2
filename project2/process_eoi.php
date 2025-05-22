@@ -161,6 +161,7 @@ if ($connp->execute()) {
     echo "<p>Error submitting application. Please try again.</p>";
 }
 
+// close access to the mysql
 $connp->close();
 $conn->close();
 
