@@ -11,8 +11,8 @@ In the footer include the link to your Jira Project (Don't forget to give access
     <!-- Metadata for the webpage -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Home Page">
-    <meta name="keywords" content="HTML5, tags">
+    <meta name="description" content="This page will act as the home page for the website, this page will also be used to give a brief description of the other pages">
+    <meta name="keywords" content="Optional Programmers, job opportunities, software developer, IT support technician, programming company, apply for jobs, careers in tech, tech company">
     <meta name="author" content="Lucas Jurgec">
     <title>Optional Programmers Home Page</title>
 
