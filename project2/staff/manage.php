@@ -74,25 +74,25 @@ if (isset($_POST['search_by_job'])) {
     }
 }
 
-// 3. Search by Applicant Name
+// 3. search by name with conditions (thanks w3School)
 if (isset($_POST['search_by_name'])) {
     $fname = trim($_POST['first_name']);
     $lname = trim($_POST['last_name']);
 
-    $conditions = [];
-    if ($fname) $conditions[] = "firstname = '$fname'";
-    if ($lname) $conditions[] = "lastname = '$lname'";
-
-    if ($conditions) {
-        $where = implode(" AND ", $conditions);
-        $query = "SELECT * FROM eoi WHERE $where";
+    if ($fname || $lname) {
+        $where = [];
+        if ($fname) $where[] = "firstname = '$fname'";
+        if ($lname) $where[] = "lastname = '$lname'";
+        
+        $query = "SELECT * FROM eoi WHERE " . implode(" AND ", $where);
         displayEOIs($conn, $query);
     } else {
         echo "<p>Please enter at least one name field.</p>";
     }
 }
 
-// 4. Delete EOIs by Job Reference
+
+// 4. delete Eoi by job reff
 if (isset($_POST['delete_by_job'])) {
     $delete_ref = trim($_POST['delete_job_ref']);
     if ($delete_ref != "") {
@@ -107,7 +107,7 @@ if (isset($_POST['delete_by_job'])) {
     }
 }
 
-// 5. Change EOI Status
+// 5. change EOI status
 if (isset($_POST['change_status'])) {
     $eoi_number = trim($_POST['eoi_number']);
     $new_status = trim($_POST['new_status']);
@@ -124,7 +124,7 @@ if (isset($_POST['change_status'])) {
     }
 }
 
-// Display EOi functions (ripped from lab09)
+// Display EOi functions (ripped from lab09 display format)
 function displayEOIs($conn, $query) {
     $result = mysqli_query($conn, $query);
     if ($result && mysqli_num_rows($result) > 0) {
