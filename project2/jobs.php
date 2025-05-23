@@ -28,106 +28,81 @@ subsections, lists etc. using the appropriate HTML elements-->
   <meta name="keywords" content="jobs, IT careers, web development, games development, positions">
   <meta name="author" content="Ali Afzali">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Job Descriptions - Optional Programmers</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<?php   include './include_files/header.inc';
-        require_once("settings.php");?>
+<body class="cssbody">
 
-  <main class="entirepage">
-    <h2>Available Positions</h2>
+<?php 
+  include './include_files/header.inc';
+  require_once("settings.php"); 
+?>
 
-    <div class="job-layout"> 
+<main class="entirepage">
+  <h2>Available Positions</h2>
+  <div class="job-layout">
 
-      <!-- Job Descriptions -->
-      <div class="job-content">
+    <div class="job-content">
+      <?php
+      $conn = @mysqli_connect($host, $user, $pwd, $sql_db);
 
-        <section>
-          <h3>IT Support Technician</h3>
-          <article>
-            <p><strong>Reference ID:</strong> G05A1<br>
-            <strong>Salary Range:</strong> $60,000 – $75,000 AUD<br>
-            <strong>Reports To:</strong> IT Services Manager</p>
+      if (!$conn) {
+        echo "<p>Database connection failed.</p>";
+      } else {
+        $query = "SELECT * FROM jobs";
+        $result = mysqli_query($conn, $query);
 
-            <p>The IT Support Technician will provide technical support to staff by troubleshooting hardware and software problems, installing new systems, and maintaining existing infrastructure. The ideal candidate is a problem-solver with strong communication skills and attention to detail.</p>
+        if ($result && mysqli_num_rows($result) > 0) {
+          while ($row = mysqli_fetch_assoc($result)) {
+            echo "<section>";
+            echo "<h3>" . htmlspecialchars($row['title']) . "</h3>";
+            echo "<article>";
+            echo "<p><strong>Reference ID:</strong> " . htmlspecialchars($row['job_ref']) . "<br>";
+            echo "<strong>Salary Range:</strong> " . htmlspecialchars($row['salary_range']) . "<br>";
+            echo "<strong>Reports To:</strong> " . htmlspecialchars($row['reports_to']) . "</p>";
 
-            <h4>Key Responsibilities</h4>
-            <ul>
-              <li>Provide Level 1 IT support for staff across the company</li>
-              <li>Assist with installation and maintenance of equipment</li>
-              <li>Document IT incidents and resolutions</li>
-              <li>Collaborate with the IT team for system upgrades</li>
-            </ul>
+            echo "<p>" . htmlspecialchars($row['description']) . "</p>";
 
-            <h4>Qualifications & Skills</h4>
-            <ol>
-              <li><strong>Essential:</strong>
-                <ul>
-                  <li>Certificate IV or higher in IT</li>
-                  <li>1+ years of experience in help desk roles</li>
-                  <li>Familiar with Windows, Mac, and networking basics</li>
-                </ul>
-              </li>
-              <li><strong>Preferable:</strong>
-                <ul>
-                  <li>Experience using support ticket systems</li>
-                  <li>Basic knowledge of cybersecurity protocols</li>
-                </ul>
-              </li>
-            </ol>
-          </article>
-        </section>
+            echo "<h4>Key Responsibilities</h4><ul>";
+            foreach (explode("\n", $row['responsibilities']) as $resp) {
+              echo "<li>" . htmlspecialchars($resp) . "</li>";
+            }
+            echo "</ul>";
 
-        <section>
-          <h3>Software Developer</h3>
-          <article>
-            <p><strong>Reference ID:</strong> GD302<br>
-            <strong>Salary Range:</strong> $80,000 – $110,000 AUD<br>
-            <strong>Reports To:</strong> Lead Software Engineer</p>
+            echo "<h4>Qualifications & Skills</h4><ol>";
+            echo "<li><strong>Essential:</strong><ul>";
+            foreach (explode("\n", $row['essential_skills']) as $skill) {
+              echo "<li>" . htmlspecialchars($skill) . "</li>";
+            }
+            echo "</ul></li>";
 
-            <p>We're seeking a talented Software Developer to build high-quality applications using modern technologies. The role involves front-end and back-end development, testing, and collaborating with cross-functional teams to deliver functional software solutions.</p>
+            echo "<li><strong>Preferable:</strong><ul>";
+            foreach (explode("\n", $row['preferable_skills']) as $skill) {
+              echo "<li>" . htmlspecialchars($skill) . "</li>";
+            }
+            echo "</ul></li></ol>";
 
-            <h4>Key Responsibilities</h4>
-            <ul>
-              <li>Design and implement scalable software solutions</li>
-              <li>Write clean, testable code in JavaScript and Python</li>
-              <li>Collaborate with designers and product managers</li>
-              <li>Maintain and improve existing codebases</li>
-            </ul>
+            echo "</article></section>";
+          }
+        } else {
+          echo "<p>No jobs found in the database.</p>";
+        }
 
-            <h4>Qualifications & Skills</h4>
-            <ol>
-              <li><strong>Essential:</strong>
-                <ul>
-                  <li>Bachelor’s in Computer Science or related field</li>
-                  <li>3+ years experience in web/app development</li>
-                  <li>Proficiency with HTML, CSS, JS, and Python</li>
-                </ul>
-              </li>
-              <li><strong>Preferable:</strong>
-                <ul>
-                  <li>Experience with React, Node.js, or Flask</li>
-                  <li>Knowledge of version control (Git)</li>
-                </ul>
-              </li>
-            </ol>
-          </article>
-        </section>
-
-      </div>
-
-      <!-- Aside box -->
-      <aside>
-        <h4>Why Work With Us?</h4>
-        <p>At Optional Programmers, we offer flexible hours, remote work opportunities, and a supportive team environment that values growth, learning, and collaboration.</p>
-      </aside>
-
+        mysqli_close($conn);
+      }
+      ?>
     </div>
-  </main>
 
-  <!-- footer content found in footer.inc-->
+    <aside>
+      <h4>Why Work With Us?</h4>
+      <p>At Optional Programmers, we offer flexible hours, remote work opportunities, and a supportive team environment that values growth, learning, and collaboration.</p>
+    </aside>
+
+  </div>
+</main>
+
 <?php include './include_files/footer.inc'; ?>
 
- </html>
+</body>
+</html>
