@@ -13,7 +13,7 @@ $password=$_POST['password'];
 
 //validation to reach the 3 login attempt limit 
 if ($_SESSION['failed_attempts'] >= 3) {
-    echo "Too many failed attempts. You are locked out.";
+    echo "Too many failed attempts. You are locked out. <a href='./staff_login.php'>Return to Login Page</a>";
     exit();
 }
 
@@ -31,17 +31,6 @@ if ($username == 'admin' && $password == 'password123') {
 }
 ?>
 
-<html>
-<form method="post" action="staff_login.php">
-  <input type="submit" name="end_session" value="(Debug) end session"><br><br>
-  </form>
-  </hmtl>
 
-<?php
-if (isset($_POST['end_session'])){
-session_start();
-session_destroy();
-}
-?>
 
 
