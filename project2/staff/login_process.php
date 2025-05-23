@@ -29,5 +29,19 @@ if ($username == 'admin' && $password == 'password123') {
     echo "Invalid login. Attempt {$_SESSION['failed_attempts']} of 3. ";
     echo "<a href='./staff_login.php'>Try again</a>";
 }
+?>
+
+<html>
+<form method="post" action="login/php">
+  <input type="submit" name="end_session" value="(Debug) end session"><br><br>
+  </form>
+  </hmtl>
+  
+<?php
+if (isset($_POST['end_session'])){
+session_start();
+session_destroy();
+}
+?>
 
 

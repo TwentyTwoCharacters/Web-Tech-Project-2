@@ -16,16 +16,6 @@
     <input type="submit" value="Login">
   </form>
 
-  <form method="post" action="login/php">
-  <input type="submit" name="end_session" value="(Debug) end session"><br><br>
-  </form>
 
 </body>
 </html>
-
-<?php
-if (isset($_POST['end_session'])){
-session_start();
-session_destroy();
-}
-?>
