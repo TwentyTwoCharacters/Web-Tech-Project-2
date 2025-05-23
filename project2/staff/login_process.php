@@ -32,11 +32,11 @@ if ($username == 'admin' && $password == 'password123') {
 ?>
 
 <html>
-<form method="post" action="login/php">
+<form method="post" action="staff_login.php">
   <input type="submit" name="end_session" value="(Debug) end session"><br><br>
   </form>
   </hmtl>
-  
+
 <?php
 if (isset($_POST['end_session'])){
 session_start();
