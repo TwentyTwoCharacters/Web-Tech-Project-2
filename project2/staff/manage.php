@@ -124,7 +124,7 @@ if (isset($_POST['change_status'])) {
     }
 }
 
-// Display EOIs
+// Display EOi functions (ripped from lab09)
 function displayEOIs($conn, $query) {
     $result = mysqli_query($conn, $query);
     if ($result && mysqli_num_rows($result) > 0) {
