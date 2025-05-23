@@ -27,7 +27,7 @@ if ($username == 'admin' && $password == 'password123') {
 } else {
     $_SESSION['failed_attempts']++;
     echo "Invalid login. Attempt {$_SESSION['failed_attempts']} of 3. ";
-    echo "<a href='../login.php'>Try again</a>";
+    echo "<a href='./staff_login.php'>Try again</a>";
 }
 
 
