@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pwd = "";
-$sql_db = "eoi"; 
+$sql_db = "finalproject2";
 
 
 $conn = mysqli_connect($host,$user,$pwd,$sql_db);
