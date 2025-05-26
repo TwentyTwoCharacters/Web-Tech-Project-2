@@ -80,7 +80,7 @@ the techniques you apply in your assignment, and could include:
             <dt><b>Ali Afzali</b></dt>
              <dd>Designed the jobs application page. Helped with CSS styling and tested the code for errors
             <br><br>
-            <dt><b>Project Part 2 Contribution<dt><b><br><br>
+            <dt><b>Project Part 2 Contribution<dt></b><br><br>
             <dd>Ali created the jobs database SQL which was to dynamically update the jobs.php page's hmtl with the databases information </dd>
             </dd>
             </dl>
