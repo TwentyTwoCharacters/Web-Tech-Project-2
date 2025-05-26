@@ -60,28 +60,28 @@ the techniques you apply in your assignment, and could include:
             <dt><b>Abhinav Thakur</b></dt>
             <dd>Designed the about page Contributed to CSS styling. Made sure that the code follows accesibilty rules</dd>
             <br><br>
-            <dt><b>Project Part 2 Contribution<dt></b><br><br>
+            <dt><b>Project Part 2 Contribution<dt></b><br>
 
-            <dd>Abhi MIA, Abhi was assigned to do task 5 which was the staff related managment area of the task however he never showed up to class</dd>
+            <dd>Abhi MIA, Abhi was assigned to do task 5 which was the staff related managment area of the task however he never showed up to class</dd><br>
             </dd>
             <dt><b>Luke Kelly</b></dt>
             <dd>Designed the the apply page. Majorly contributed in CSS formatting. Set up the Github repository</dd>
             <br><br>
-            <dt><b>Project Part 2 Contribution<dt></b><br><br>
-            <dd>Luke formatted all the pages to PHP and created the include files and embeded them, he also had to pick up Abhis tasks due to abhis absence</dd>
+            <dt><b>Project Part 2 Contribution<dt></b><br>
+            <dd>Luke formatted all the pages to PHP and created the include files and embeded them, he also had to pick up Abhis tasks due to abhis absence</dd><br>
             </dd>
             <dt><b>Lucas Jurgec</b></dt>
             <dd>Created the Optional programmers animation header.Designed the home page and set up the Jira project.</dd>
             <br><br>
-            <dt><b> Project Part 2 Contribution<dt></b><br><br>
+            <dt><b> Project Part 2 Contribution<dt></b><br>
             <dd>Lucas created the EOI database and the SQL - PHP communication on the apply page which pushed the EOI's to the database.
-            </dd>
+            </dd><br>
             </dd>
             <dt><b>Ali Afzali</b></dt>
              <dd>Designed the jobs application page. Helped with CSS styling and tested the code for errors
             <br><br>
-            <dt><b>Project Part 2 Contribution<dt></b><br><br>
-            <dd>Ali created the jobs database SQL which was to dynamically update the jobs.php page's hmtl with the databases information </dd>
+            <dt><b>Project Part 2 Contribution<dt></b><br>
+            <dd>Ali created the jobs database SQL which was to dynamically update the jobs.php page's hmtl with the databases information </dd><br>
             </dd>
             </dl>
 
