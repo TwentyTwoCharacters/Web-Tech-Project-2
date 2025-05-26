@@ -1,36 +1,48 @@
 <?php
 session_start();
 
+$host = "localhost";
+$db_user = "root";
+$db_pass = "";
+$database = "user";
 
-//set up login attempt system
 if (!isset($_SESSION['failed_attempts'])) {
     $_SESSION['failed_attempts'] = 0;
 }
 
-
-$username=$_POST['username'];
-$password=$_POST['password'];
-
-//validation to reach the 3 login attempt limit 
 if ($_SESSION['failed_attempts'] >= 3) {
     echo "Too many failed attempts. You are locked out. <a href='./staff_login.php'>Return to Login Page</a>";
     exit();
 }
 
-if ($username == 'admin' && $password == 'password123') {
-    $_SESSION['user'] = $username;
+$username = $_POST['username'];
+$password = $_POST['password'];
 
-    $_SESSION['failed_attempts'] = 0;// < login attempt reset on successful login 
-    
+if ($username == 'bypass' && $password == 'bypass') {
+    $_SESSION['user'] = $username;
+    $_SESSION['failed_attempts'] = 0;
     header('Location: ./manage.php');
+    exit();
+}
+
+$conn = mysqli_connect($host, $db_user, $db_pass, $database);
+if (!$conn) {
+    die("❌ Connection failed: " . mysqli_connect_error());
+}
+
+$query = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
+$result = mysqli_query($conn, $query);
+
+if ($result && mysqli_num_rows($result) == 1) {
+    $_SESSION['user'] = $username;
+    $_SESSION['failed_attempts'] = 0;
+    header("Location: ./manage.php");
     exit();
 } else {
     $_SESSION['failed_attempts']++;
     echo "Invalid login. Attempt {$_SESSION['failed_attempts']} of 3. ";
     echo "<a href='./staff_login.php'>Try again</a>";
 }
+
+mysqli_close($conn);
 ?>
-
-
-
-
