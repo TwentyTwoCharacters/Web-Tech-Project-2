@@ -1,10 +1,7 @@
 <?php
 session_start();
 
-$host = "localhost";
-$db_user = "root";
-$db_pass = "";
-$database = "eoi";
+require_once("../settings.php");
 
 if (!isset($_SESSION['failed_attempts'])) {
     $_SESSION['failed_attempts'] = 0;
