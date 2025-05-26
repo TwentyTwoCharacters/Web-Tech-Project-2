@@ -22,8 +22,17 @@ if ($username == 'bypass' && $password == 'bypass') {
     exit();
 }
 
+$conn = @mysqli_connect($host, $username_db, $password_db, $database);
+
+if (!$conn) {
+    $_SESSION['failed_attempts']++;
+    echo "Login failed. Please check your credentials or system setup. ";
+    echo "<a href='./staff_login.php'>Try again</a>";
+    exit();
+}
+
 $query = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
-$result = mysqli_query($conn, $query);
+$result = @mysqli_query($conn, $query);
 
 if ($result && mysqli_num_rows($result) == 1) {
     $_SESSION['user'] = $username;
