@@ -22,7 +22,8 @@ if ($username == 'bypass' && $password == 'bypass') {
     exit();
 }
 
-$conn = @mysqli_connect($host, $username_db, $password_db, $database);
+$conn = @mysqli_connect($host, $user, $pwd, $sql_db);
+
 
 if (!$conn) {
     $_SESSION['failed_attempts']++;
