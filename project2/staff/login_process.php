@@ -4,7 +4,7 @@ session_start();
 $host = "localhost";
 $db_user = "root";
 $db_pass = "";
-$database = "user";
+$database = "eoi";
 
 if (!isset($_SESSION['failed_attempts'])) {
     $_SESSION['failed_attempts'] = 0;
