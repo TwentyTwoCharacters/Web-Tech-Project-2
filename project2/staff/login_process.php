@@ -25,7 +25,6 @@ if ($username == 'bypass' && $password == 'bypass') {
     exit();
 }
 
-
 $query = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
 $result = mysqli_query($conn, $query);
 
