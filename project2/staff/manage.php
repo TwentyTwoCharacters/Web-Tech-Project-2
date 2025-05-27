@@ -34,16 +34,17 @@ require_once("../settings.php");
 </form>
 <?php 
 if (isset($_POST['add_user'])) {
-    $new_email = trim($_POST['new_email']);
-    $current_user = $_SESSION['username'];
-
-    $query = "UPDATE user SET email = '$new_email' WHERE username = '$current_user'";
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
+    
+    $query = "CREATE user SET username = '$username' WHERE username = '$password'";
     if (mysqli_query($conn, $query)) {
-        header("Location: profile.php");
+        header("Location: manage.php");
         exit();
     } else {
-        echo "❌ Error updating email: " . mysqli_error($conn);
+        echo "❌ Error adding user." . mysqli_error($conn);
     }
+}
 ?>
 
     <form method="post" action="manage.php">
