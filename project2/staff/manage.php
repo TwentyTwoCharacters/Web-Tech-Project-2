@@ -27,9 +27,24 @@ require_once("../settings.php");
         <p>Please refer to the tools below.</p>
     </section>
 <form method="post" action="manage.php"> 
-    <input type="submit" name="add_user" value="Register New User"><br><br>
+ Username:<input type="text" name="username"><br>
+ Password:<input type="text" name="password"><br>
+ <input type="submit" name="add_user" value="Register New User"><br><br>
 
 </form>
+<?php 
+if (isset($_POST['add_user'])) {
+    $new_email = trim($_POST['new_email']);
+    $current_user = $_SESSION['username'];
+
+    $query = "UPDATE user SET email = '$new_email' WHERE username = '$current_user'";
+    if (mysqli_query($conn, $query)) {
+        header("Location: profile.php");
+        exit();
+    } else {
+        echo "❌ Error updating email: " . mysqli_error($conn);
+    }
+?>
 
     <form method="post" action="manage.php">
         <input type="submit" name="list_all" value="List All EOIs"><br><br>
