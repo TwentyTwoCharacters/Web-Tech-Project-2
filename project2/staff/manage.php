@@ -22,10 +22,14 @@ require_once("../settings.php");
 <section class="entirepage">
     <section class="pagetop">
         <br>
-        <h1 class="applyh1">Expression of Interest Tools</h1>
-        <p>This is the EOI management portal for our company Optional Programmers.</p>
+        <h1 class="applyh1">Manager Tools</h1>
+        <p>This is the management portal for our company Optional Programmers.</p>
         <p>Please refer to the tools below.</p>
     </section>
+<form method="post" action="manage.php"> 
+    <input type="submit" name="add_user" value="Register New User"><br><br>
+
+</form>
 
     <form method="post" action="manage.php">
         <input type="submit" name="list_all" value="List All EOIs"><br><br>
@@ -52,6 +56,7 @@ require_once("../settings.php");
 
     <hr>
 
+<!-- EOI SEARCH SECTION-->
 <?php 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
