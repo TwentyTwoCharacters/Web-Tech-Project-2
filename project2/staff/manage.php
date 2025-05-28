@@ -41,9 +41,7 @@ if (isset($_POST['add_user'])) {
     
     if (mysqli_query($conn, $query)) {
         echo "<p>User '$add_username' registered successfully.</p>";
-        // Optional: redirect
-        // header("Location: manage.php");
-        // exit();
+    
     } else {
         echo "<p>Error adding user: " . mysqli_error($conn) . "</p>";
     }
