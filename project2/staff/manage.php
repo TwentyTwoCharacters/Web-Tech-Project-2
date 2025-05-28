@@ -27,25 +27,29 @@ require_once("../settings.php");
         <p>Please refer to the tools below.</p>
     </section>
 <form method="post" action="manage.php"> 
- Username:<input type="text" name="username"><br>
- Password:<input type="text" name="password"><br>
- <input type="submit" name="add_user" value="Register New User"><br><br>
-
+    Username: <input type="text" name="username" required><br>
+    Password: <input type="text" name="password" required><br>
+    <input type="submit" name="add_user" value="Register New User"><br><br>
 </form>
+
 <?php 
 if (isset($_POST['add_user'])) {
-    $username = trim($_POST['username']);
-    $password = trim($_POST['password']);
+    $add_username = trim($_POST['username']);
+    $add_password = trim($_POST['password']);
+
+    $query = "INSERT INTO users (username, password) VALUES ('$add_username', '$add_password')";
     
-    $query = "CREATE user SET username = '$username' WHERE username = '$password'";
     if (mysqli_query($conn, $query)) {
-        header("Location: manage.php");
-        exit();
+        echo "<p>User '$add_username' registered successfully.</p>";
+        // Optional: redirect
+        // header("Location: manage.php");
+        // exit();
     } else {
-        echo "❌ Error adding user." . mysqli_error($conn);
+        echo "<p>Error adding user: " . mysqli_error($conn) . "</p>";
     }
 }
 ?>
+
 
     <form method="post" action="manage.php">
         <input type="submit" name="list_all" value="List All EOIs"><br><br>
