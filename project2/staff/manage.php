@@ -37,7 +37,7 @@ if (isset($_POST['add_user'])) {
     $add_username = trim($_POST['username']);
     $add_password = trim($_POST['password']);
 
-    $query = "INSERT INTO users (username, password) VALUES ('$add_username', '$add_password')";
+    $query = "INSERT INTO user (username, password) VALUES ('$add_username', '$add_password')";
     
     if (mysqli_query($conn, $query)) {
         echo "<p>User '$add_username' registered successfully.</p>";
