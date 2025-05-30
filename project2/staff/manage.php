@@ -115,7 +115,7 @@ if (isset($_POST['search_by_name'])) {
 }
 
 
-// 4. delete Eoi by job reff
+// 4. delete Eoi by job reff dosnt work for some reasonnnnnnnnnnn
 if (isset($_POST['delete_by_job'])) {
     $delete_ref = trim($_POST['delete_job_ref']);
     if ($delete_ref != "") {
