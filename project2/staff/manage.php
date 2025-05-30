@@ -55,8 +55,8 @@ if (isset($_POST['add_user'])) {
         Job Reference: <input type="text" name="job_ref">
         <input type="submit" name="search_by_job" value="Search by Job"><br><br>
 
-        First Name: <input type="text" name="first_name">
-        Last Name: <input type="text" name="last_name">
+        First Name and Last Name <input type="text" name="first_name">
+        <input type="text" name="last_name">
         <input type="submit" name="search_by_name" value="Search by Name"><br><br>
 
         Delete EOIs with Job Ref: <input type="text" name="delete_job_ref">
